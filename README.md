@@ -1,7 +1,10 @@
 # DevEnvDevilbox
-
+```
 cd home
-
-clone 
-
+```
+```
+clone https://github.com/jonatanaxe/DevEnvDevilbox.git
+```
+```
 chmod +x devenvdevilbox.sh 
+```
