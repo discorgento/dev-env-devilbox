@@ -1,6 +1,6 @@
 # DevEnvDevilbox
 ```
-cd /home
+cd $USER
 ```
 ```
 sudo apt update
