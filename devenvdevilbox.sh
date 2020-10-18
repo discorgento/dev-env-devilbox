@@ -25,7 +25,7 @@ installapps(){
 "
 read respostaapps
 case "$respostaapps" in
-    v|V|"")
+    v|V)
         vscode
         clear
         echo "Instalado vscode"
@@ -61,7 +61,7 @@ case "$respostaapps" in
         clear
         echo "Xau..."
     ;;
-    *)
+    *|"")
         clear
         echo "Opção inválida"
         installapps
@@ -222,7 +222,7 @@ case "$resposta" in
         clear
         echo "Xau..."
     ;;
-    *)
+    *|"")
         clear
         echo "Opção inválida"
     ;;
