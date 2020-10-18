@@ -1,7 +1,7 @@
 # DevEnvDevilbox Ubuntu 20.04
 
 **[important]
-Caso não for uma instalação limpa do ubuntu, verifique os repositorios abaixo e remova para nao ser duplicados**
+Caso não for uma instalação limpa do ubuntu, verifique os repositorios abaixo se ja estao no seu sistema e remova para nao ser duplicados**
 ```
 https://download.docker.com/linux/ubuntu
 http://repository.spotify.com
