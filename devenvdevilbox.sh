@@ -61,10 +61,6 @@ echo "Install docker-compose 1.27.4"
 
 sudo curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
-docker-compose --version
-
-echo "Subindo container hello-world"
-docker run hello-world
 
 echo "Install Devilbox"
 cd $HOME
@@ -75,6 +71,4 @@ cd devilbox
 
 wget -c https://raw.githubusercontent.com/jonatanaxe/DevEnvDevilbox/main/.env
 
-echo "Agora você pode subir os container com 'docker-compose up'"
-
-cd $HOME/devilbox
+echo "Reinicia o pc e entre dentro da pasta 'cd $HOME/devilbox' e inicie os containers 'docker-compose up'"
