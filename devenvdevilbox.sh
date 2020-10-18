@@ -107,7 +107,7 @@ welcomeenv(){
     "
 }
 
-echo -n "O que deseja instalar? (A)pps/(D)evilBox/(T)udo/(S)air? [A] "
+echo -n "O que deseja instalar? (A)pps/(D)evilBox/(T)udo/(S)air?"
 read resposta
 case "$resposta" in
     a|A|"")
