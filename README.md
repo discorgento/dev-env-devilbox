@@ -23,6 +23,12 @@ sudo apt update && sudo apt upgrade && sudo apt autoremove && sudo apt autoclean
 ```
 sudo apt install git && cd $HOME && git clone https://github.com/jonatanaxe/DevEnvDevilbox.git && cd DevEnvDevilbox && chmod +x devenvdevilbox.sh && ./devenvdevilbox.sh
 ```
+Você pode selecionar o que deseja instalar
+![o que deseja instalar](https://i.imgur.com/JqD1Toi.png)
+
+Caso selecione os apps ou tudo vai ter um outro menu assim 
+![install apps](https://i.imgur.com/gOMsclV.png)
+
 
 ### Erros possiveis
 
