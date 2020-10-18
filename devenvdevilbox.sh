@@ -12,6 +12,89 @@ sudo apt install \
 
 clear
 
+installapps(){
+
+    echo -n "
+    Qual app deseja instalar?
+        (V)scode
+        (C)hrome
+        (T)ilix
+        (S)potify
+        (A)ll
+        (E)xit/não quero instalar apps
+"
+read respostaapps
+case "$respostaapps" in
+    v|V|"")
+        vscode
+        clear
+        echo "Instalado vscode"
+        installapps
+    ;;
+    c|C)
+        chrome
+        clear
+        echo "Instalado google chrome"
+        installapps
+    ;;
+    t|T)
+        tilix
+        clear
+        echo "Instalado tilix"
+        installapps
+    ;;
+    s|S)
+        spotify
+        clear
+        echo "Instalado spotify"
+        installapps
+    ;;
+    a|A)
+        vscode
+        chrome
+        tilix
+        spotify
+        clear
+        echo "Instalado vscode, chrome, tilix e spotify"
+    ;;
+    e|E)
+        clear
+        echo "Xau..."
+    ;;
+    *) 
+        clear
+        echo "Opção inválida"
+        installapps
+    ;;
+esac
+
+}
+
+
+tilix(){
+    sudo apt -y install tilix
+}
+
+vscode(){
+    wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add --
+    sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+    sudo apt -y install code
+}
+
+chrome(){
+    wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+    sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
+    sudo apt -y install google-chrome-stable
+}
+
+spotify(){
+    wget -O- https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add -
+    sudo add-apt-repository "deb http://repository.spotify.com stable non-free"
+    sudo apt -y install spotify-client
+}
+
+
+
 installenv(){
     echo "Install Docker"
 
@@ -49,48 +132,6 @@ installenv(){
     clear
 }
 
-installapps(){
-    echo "Adicionando repositórios usados"
-    wget -O- https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add -
-    sudo add-apt-repository "deb http://repository.spotify.com stable non-free"
-
-    wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-    sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
-
-    wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add --
-    sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
-
-    echo "Update repositório"
-    sudo apt update
-
-    echo "Install apps"
-    sudo apt -y install \
-    code \
-    google-chrome-stable \
-    tilix \
-    spotify-client
-
-    clear
-}
-
-welcomeapps(){
-    echo "
-####################
-Apps instalados :D
-Abraços
-Jonatan Machado
-####################
-    "
-
-    echo "
-Apps instalados
-    code
-    google-chrome-stable
-    tilix
-    spotify-client
-    "
-}
-
 welcomeenv(){
     echo "
 ####################
@@ -123,13 +164,12 @@ echo -n "
         (A)pps
         (D)evilBox
         (T)udo
-        (S)air
+        (E)xit
 "
 read resposta
 case "$resposta" in
     a|A|"")
         installapps
-        welcomeapps
     ;;
     d|D)
         installenv
@@ -138,13 +178,14 @@ case "$resposta" in
     t|T)
         installapps
         installenv
-        welcomeapps
         welcomeenv
     ;;
-    s|S)
+    e|E)
+        clear
         echo "Xau..."
     ;;
     *)
+        clear
         echo "Opção inválida"
     ;;
 esac
