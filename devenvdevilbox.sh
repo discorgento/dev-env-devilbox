@@ -56,9 +56,6 @@ sudo apt install docker-ce
 
 echo "Aplicando permissão user Docker"
 sudo usermod -aG docker ${USER}
-su - ${USER}
-id -nG
-
 
 echo "Install docker-compose 1.27.4"
 
