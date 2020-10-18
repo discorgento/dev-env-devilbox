@@ -7,3 +7,55 @@ uptime
 echo "O script está executando do diretório:"
 pwd
 
+echo "Update repositório"
+sudo apt update
+
+echo "Install apps"
+sudo apt -y install \
+  vscode \
+  google-chrome-stable \
+  ubuntu-tweak \
+
+echo "Install Pré-requisito"
+sudo apt install apt-transport-https ca-certificates curl software-properties-common
+
+echo "Install Docker"
+
+echo "Repositório fontes do APT"
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+
+echo "Update repositório"
+sudo apt update
+
+echo "Install Docker"
+apt-cache policy docker-ce
+sudo apt install docker-ce
+
+echo "Aplicando permissão user Docker"
+sudo usermod -aG docker ${USER}
+su - ${USER}
+id -nG
+
+
+echo "Install docker-compose 1.27.4"
+
+sudo curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+docker-compose --version
+
+echo "Subindo container hello-world"
+docker run hello-world
+
+echo "Install Devilbox"
+cd /home/$USER
+
+git clone https://github.com/cytopia/devilbox.git
+
+cd devilbox
+
+wget -C https://raw.githubusercontent.com/jonatanaxe/DevEnvDevilbox/main/.env
