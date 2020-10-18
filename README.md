@@ -34,7 +34,7 @@ Caso selecione os apps ou tudo vai ter um outro menu assim
 
 ### Erros possiveis
 
-Possível erro de apt-key rode esse comando abixo altere no final por sua key
+Possível erro de apt-key rode esse comando abaixo altere no final por sua key
 ```
 sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 4773BD5E130D1D45
 ```
