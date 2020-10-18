@@ -84,7 +84,7 @@ echo "
 "
 
 echo "
-Apps instalados Instalado
+Apps instalados
   code
   google-chrome-stable
   tilix
