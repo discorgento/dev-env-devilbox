@@ -21,8 +21,8 @@ echo "Adicionando repositórios usados"
 wget -O- https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add -
 sudo add-apt-repository "deb http://repository.spotify.com stable non-free"
 
-wget -q -O -- https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add --
-sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
 
 wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add --
 sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
