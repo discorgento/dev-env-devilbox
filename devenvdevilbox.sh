@@ -67,12 +67,14 @@ echo "Subindo container hello-world"
 docker run hello-world
 
 echo "Install Devilbox"
-cd /home/$USER
+cd $HOME
 
 git clone https://github.com/cytopia/devilbox.git
 
 cd devilbox
 
-wget -C https://raw.githubusercontent.com/jonatanaxe/DevEnvDevilbox/main/.env
+wget -c https://raw.githubusercontent.com/jonatanaxe/DevEnvDevilbox/main/.env
 
-echo "Agora você pode subir os container com 'docker-compose u'"
+echo "Agora você pode subir os container com 'docker-compose up'"
+
+cd $HOME/devilbox
