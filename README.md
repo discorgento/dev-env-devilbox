@@ -21,7 +21,7 @@ sudo apt update && sudo apt upgrade && sudo apt autoremove && sudo apt autoclean
 ### Agora rode esse comando para começar a instalação
 
 ```
-sudo apt install git && cd /home/$USER && git clone https://github.com/jonatanaxe/DevEnvDevilbox.git && cd DevEnvDevilbox && chmod +x devenvdevilbox.sh && ./devenvdevilbox.sh
+sudo apt install git && cd $HOME && git clone https://github.com/jonatanaxe/DevEnvDevilbox.git && cd DevEnvDevilbox && chmod +x devenvdevilbox.sh && ./devenvdevilbox.sh
 ```
 
 ### Erros possiveis
