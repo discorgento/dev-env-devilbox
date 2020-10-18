@@ -61,7 +61,7 @@ case "$respostaapps" in
         clear
         echo "Xau..."
     ;;
-    *) 
+    *)
         clear
         echo "Opção inválida"
         installapps
@@ -127,7 +127,7 @@ installenv(){
 
     cd devilbox
 
-    wget -c https://raw.githubusercontent.com/jonatanaxe/DevEnvDevilbox/main/.env
+    wget -c https://raw.githubusercontent.com/jonatanaxe/DevEnvDevilbox/main/devilbox/.env
 
     clear
 }
@@ -160,7 +160,7 @@ VSCODE Docker -> https://marketplace.visualstudio.com/items?itemName=ms-azuretoo
 }
 
 echo -n "
-    O que deseja instalar? 
+    O que deseja instalar?
         (A)pps
         (D)evilBox
         (T)udo
