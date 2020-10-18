@@ -7,6 +7,22 @@ uptime
 echo "O script está executando do diretório:"
 pwd
 
+echo "Install Pré-requisito"
+sudo apt install \
+    curl \
+    apt-transport-https \
+    ca-certificates \
+    software-properties-common \
+    ubuntu-restricted-extras \
+    libavcodec-extra \
+    libav-tools
+
+
+echo "Adicionando repositórios usados"
+sudo add-apt-repository ppa:webupd8team/terminix
+curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+
 echo "Update repositório"
 sudo apt update
 
@@ -15,9 +31,8 @@ sudo apt -y install \
   vscode \
   google-chrome-stable \
   ubuntu-tweak \
-
-echo "Install Pré-requisito"
-sudo apt install apt-transport-https ca-certificates curl software-properties-common
+  tilix \
+  spotify-client
 
 echo "Install Docker"
 
@@ -59,3 +74,6 @@ git clone https://github.com/cytopia/devilbox.git
 cd devilbox
 
 wget -C https://raw.githubusercontent.com/jonatanaxe/DevEnvDevilbox/main/.env
+
+echo "Subir conteiners docker-compose up"
+docker-compose up
