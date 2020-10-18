@@ -1,6 +1,15 @@
 
 #!/bin/bash
 
+echo "Install Pré-requisito"
+sudo apt install \
+    curl \
+    wget \
+    apt-transport-https \
+    ca-certificates \
+    software-properties-common \
+    ubuntu-restricted-extras
+
 installenv(){
     echo "Install Docker"
 
