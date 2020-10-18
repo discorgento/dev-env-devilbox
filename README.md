@@ -3,10 +3,10 @@
 **[important]
 Caso não for uma instalação limpa do ubuntu, verifique os repositorios abaixo se ja estao no seu sistema e remova para nao ser duplicados**
 ```
-https://download.docker.com/linux/ubuntu
 http://repository.spotify.com
-http://dl.google.com/linux/chrome/deb/
 https://packages.microsoft.com/repos/vscode
+https://download.docker.com/linux/ubuntu
+http://dl.google.com/linux/chrome/deb/
 ```
 ![repo](https://i.imgur.com/Jk4Uy6S.png)
 
