@@ -75,5 +75,4 @@ cd devilbox
 
 wget -C https://raw.githubusercontent.com/jonatanaxe/DevEnvDevilbox/main/.env
 
-echo "Subir conteiners docker-compose up"
-docker-compose up
+echo "Agora você pode subir os container com 'docker-compose u'"
