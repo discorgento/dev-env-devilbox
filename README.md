@@ -1,4 +1,4 @@
-# DevEnvDevilbox
+# DevEnvDevilbox Ubuntu 20.04
 ```
 sudo apt update
 sudo apt install git
