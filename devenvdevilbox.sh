@@ -72,24 +72,56 @@ esac
 
 
 tilix(){
+    clear
+    echo "***Instalando tilix"
     sudo apt -y install tilix
 }
 
 vscode(){
-    wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add --
-    sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+    clear
+    echo "Adicionar repositorio vscode? y/n"
+    read repovscode
+    if [ $repovscode = "y" ]
+    then
+        wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add --
+        sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+        echo "***Repositorio vscode adicionado"
+    else
+        echo "***Não Adicionado Repositorio"
+    fi
+    echo "***Instalando vscode"
     sudo apt -y install code
 }
 
 chrome(){
-    wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-    sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
+    clear
+    echo "Adicionar repositorio chrome? y/n"
+    read repochrome
+    if [ $repochrome = "y" ]
+    then
+        wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+        sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
+        echo "***Repositorio chrome adicionado"
+    else
+        echo "***Não Adicionado Repositorio"
+    fi
+    echo "***Instalando google chrome"
     sudo apt -y install google-chrome-stable
 }
 
 spotify(){
-    wget -O- https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add -
-    sudo add-apt-repository "deb http://repository.spotify.com stable non-free"
+    clear
+    echo "Adicionar repositorio spotify? y/n"
+    read repospotify
+    if [ $repospotify = "y" ]
+    then
+        wget -O- https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add -
+        sudo add-apt-repository "deb http://repository.spotify.com stable non-free"
+        echo "***Repositorio spotify adicionado"
+    else
+        echo "***Não Adicionado Repositorio"
+    fi
+    echo "***Instalando spotify"
     sudo apt -y install spotify-client
 }
 
@@ -98,13 +130,19 @@ spotify(){
 installenv(){
     echo "Install Docker"
 
-    echo "Repositório fontes do APT"
-    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-
-    sudo add-apt-repository \
-    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-    $(lsb_release -cs) \
-    stable"
+    echo "Adicionar repositorio docker? y/n"
+    read repodocker
+    if [ $repodocker = "y" ]
+    then
+        curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+        sudo add-apt-repository \
+        "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+        $(lsb_release -cs) \
+        stable"
+        echo "***Repositorio docker adicionado"  
+    else
+        echo "***Não Adicionado Repositorio"
+    fi
 
     sudo apt update
 
@@ -168,7 +206,7 @@ echo -n "
 "
 read resposta
 case "$resposta" in
-    a|A|"")
+    a|A)
         installapps
     ;;
     d|D)
