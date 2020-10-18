@@ -28,7 +28,7 @@ sudo apt upgrade
 sudo apt install git && cd /home/$USER && git clone https://github.com/jonatanaxe/DevEnvDevilbox.git && cd DevEnvDevilbox && chmod +x devenvdevilbox.sh && ./devenvdevilbox.sh
 ```
 
-Possiveis erros de apt-key rode esse comando no final troque por sua key
+Possível erro de apt-key rode esse comando abixo altere no final por sua key
 ```
 sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 4773BD5E130D1D45
 ```
