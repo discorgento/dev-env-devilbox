@@ -10,6 +10,8 @@ sudo apt install \
     software-properties-common \
     ubuntu-restricted-extras
 
+clear
+
 installenv(){
     echo "Install Docker"
 
@@ -116,7 +118,13 @@ VSCODE Docker -> https://marketplace.visualstudio.com/items?itemName=ms-azuretoo
     "
 }
 
-echo -n "O que deseja instalar? (A)pps/(D)evilBox/(T)udo/(S)air?"
+echo -n "
+    O que deseja instalar? 
+        (A)pps
+        (D)evilBox
+        (T)udo
+        (S)air
+"
 read resposta
 case "$resposta" in
     a|A|"")
