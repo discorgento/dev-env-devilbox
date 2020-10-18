@@ -3,12 +3,19 @@
 Caso tenha os repositorios abaixo remova para nao ser duplicados
 
 Docker
+```
 https://download.docker.com/linux/ubuntu
-
+```
 Apps
+```
 http://repository.spotify.com
+```
+```
 http://dl.google.com/linux/chrome/deb/
+```
+```
 https://packages.microsoft.com/repos/vscode
+```
 
 
 ```
