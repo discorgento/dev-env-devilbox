@@ -14,9 +14,7 @@ sudo apt install \
     apt-transport-https \
     ca-certificates \
     software-properties-common \
-    ubuntu-restricted-extras \
-    libavcodec-extra \
-    libav-tools
+    ubuntu-restricted-extras
 
 
 echo "Adicionando repositórios usados"
