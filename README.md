@@ -1,21 +1,13 @@
 # DevEnvDevilbox Ubuntu 20.04
 
 **[important]Caso nao for uma instalação limpa do ubuntu, verifique os repositorios abaixo e remova para nao ser duplicados**
-![repo](https://i.imgur.com/Jk4Uy6S.png)
-Docker
 ```
 https://download.docker.com/linux/ubuntu
-```
-Apps
-```
 http://repository.spotify.com
-```
-```
 http://dl.google.com/linux/chrome/deb/
-```
-```
 https://packages.microsoft.com/repos/vscode
 ```
+![repo](https://i.imgur.com/Jk4Uy6S.png)
 
 ## Instalação 
 
