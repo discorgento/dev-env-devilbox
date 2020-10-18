@@ -1,7 +1,7 @@
 
 #!/bin/bash
 
-env(){
+installenv(){
     echo "Install Docker"
 
     echo "Repositório fontes do APT"
@@ -38,7 +38,7 @@ env(){
     clear
 }
 
-apps(){
+installapps(){
     echo "Adicionando repositórios usados"
     wget -O- https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add -
     sudo add-apt-repository "deb http://repository.spotify.com stable non-free"
@@ -111,16 +111,16 @@ echo -n "O que deseja instalar? (A)pps/(D)evilBox/(T)udo/(S)air?"
 read resposta
 case "$resposta" in
     a|A|"")
-        apps
+        installapps
         welcomeapps
     ;;
     d|D)
-        env
+        installenv
         welcomeenv
     ;;
     t|T)
-        apps
-        env
+        installapps
+        installenv
         welcomeapps
         welcomeenv
     ;;
