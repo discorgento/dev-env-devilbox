@@ -73,15 +73,15 @@ installapps(){
 
 welcomeapps(){
     echo "
-        ####################
-        Apps instalados :D
-        Abraços
-        Jonatan Machado
-        ####################
+####################
+Apps instalados :D
+Abraços
+Jonatan Machado
+####################
     "
 
     echo "
-    Apps instalados
+Apps instalados
     code
     google-chrome-stable
     tilix
@@ -91,28 +91,28 @@ welcomeapps(){
 
 welcomeenv(){
     echo "
-        ####################
-        Ambiente instalado :D
-        Caso tenha problema para iniciar o docker reinicie o sistema
-        Obs(guarde esses comandos e links abaixo)
-        Abraços
-        Jonatan Machado
-        ####################
+####################
+Ambiente instalado :D
+Caso tenha problema para iniciar o docker reinicie o sistema
+Obs(guarde esses comandos e links abaixo)
+Abraços
+Jonatan Machado
+####################
     "
     echo "
-    Ambiente Desenvolvimento DevilBox
-    Entre na pasta
-        cd $HOME/devilbox
-    Comando para subir containers
-        docker-compose up
-    Comando para derrubar os containers
-        docker-compose down
+Ambiente Desenvolvimento DevilBox
+Entre na pasta
+    cd $HOME/devilbox
+Comando para subir containers
+    docker-compose up
+Comando para derrubar os containers
+    docker-compose down
     "
     echo "
-    Links uteis
-    Devilbox DOC -> https://devilbox.readthedocs.io/en/latest/
-    Gnome Docker -> https://extensions.gnome.org/extension/2224/easy-docker-containers/
-    VSCODE Docker -> https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker
+Links uteis
+Devilbox DOC -> https://devilbox.readthedocs.io/en/latest/
+Gnome Docker -> https://extensions.gnome.org/extension/2224/easy-docker-containers/
+VSCODE Docker -> https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker
     "
 }
 
