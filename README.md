@@ -19,13 +19,10 @@ https://packages.microsoft.com/repos/vscode
 
 ## Instalação 
 
-### Faça o upgrade do sistema
+### Faça o update do sistema
 
 ```
-sudo apt update
-```
-```
-sudo apt upgrade
+sudo apt update && sudo apt upgrade && sudo apt autoremove && sudo apt autoclean
 ```
 
 ### Agora rode esse comando para começar a instalação
