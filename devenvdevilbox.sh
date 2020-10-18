@@ -71,4 +71,37 @@ cd devilbox
 
 wget -c https://raw.githubusercontent.com/jonatanaxe/DevEnvDevilbox/main/.env
 
-echo "Reinicia o pc e entre dentro da pasta 'cd $HOME/devilbox' e inicie os containers 'docker-compose up'"
+clear
+
+echo "
+    ####################
+    Tudo foi instalado :D
+    Caso tenha problema para iniciar o docker reinicie o sistema
+    Obs(guarde esses comandos e links abaixo)
+    Abraços
+    Jonatan Machado
+    ####################
+"
+
+echo "
+Apps instalados Instalado
+  code
+  google-chrome-stable
+  tilix
+  spotify-client
+"
+echo "
+Ambiente Desenvolvimento DevilBox 
+  Entre na pasta 
+    cd $HOME/devilbox
+  Comando para subir containers
+    docker-compose up
+  Comando para derrubar os containers
+    docker-compose down
+"
+echo "
+Links uteis
+Devilbox DOC -> https://devilbox.readthedocs.io/en/latest/
+Gnome Docker -> https://extensions.gnome.org/extension/2224/easy-docker-containers/
+VSCODE Docker -> https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker
+"
