@@ -24,14 +24,16 @@ sudo add-apt-repository "deb http://repository.spotify.com stable non-free"
 wget -q -O -- https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add --
 sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
 
+wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add --
+sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+
 echo "Update repositório"
 sudo apt update
 
 echo "Install apps"
 sudo apt -y install \
-  vscode \
+  code \
   google-chrome-stable \
-  ubuntu-tweak \
   tilix \
   spotify-client
 
