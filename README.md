@@ -17,6 +17,9 @@ http://dl.google.com/linux/chrome/deb/
 https://packages.microsoft.com/repos/vscode
 ```
 
+## Instalação 
+
+### Faça o upgrade do sistema
 
 ```
 sudo apt update
@@ -24,9 +27,14 @@ sudo apt update
 ```
 sudo apt upgrade
 ```
+
+### Agora rode esse comando para começar a instalação
+
 ```
 sudo apt install git && cd /home/$USER && git clone https://github.com/jonatanaxe/DevEnvDevilbox.git && cd DevEnvDevilbox && chmod +x devenvdevilbox.sh && ./devenvdevilbox.sh
 ```
+
+### Erros possiveis
 
 Possível erro de apt-key rode esse comando abixo altere no final por sua key
 ```
