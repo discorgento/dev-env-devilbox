@@ -52,4 +52,8 @@ alias upgrade="sudo apt update && sudo apt upgrade && sudo apt autoremove && sud
 alias grun="grunt clean && grunt exec && grunt less && grunt watch"
 alias mgcmd='magento-cloud mount:download'
 alias mgdd='magento-cloud db:dump'
+# habilita o xdebug
+alias xh="cd ~/devilbox && sed -i '/PHP_MODULES_DISABLE/s/xdebug/ /g' .env && dr"
+# desabilita o xdebug
+alias xd="cd ~/devilbox && sed -i '/PHP_MODULES_DISABLE/s/ /xdebug/g' .env && dr"
 ```
