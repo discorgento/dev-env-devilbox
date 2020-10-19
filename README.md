@@ -38,3 +38,18 @@ Possível erro de apt-key rode esse comando abaixo altere no final por sua key
 ```
 sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 4773BD5E130D1D45
 ```
+
+### Alias Opcional nano ~/.zshrc
+
+```
+alias zshconf="nano ~/.zshrc"
+alias ohmyzsh="nano ~/.oh-my-zsh"
+alias dup="cd ~/devilbox && docker-compose up -d && ./shell.sh"
+alias ddown="cd ~/devilbox && docker-compose down && docker-compose stop"
+alias dr="cd ~/devilbox && docker-compose stop && docker-compose rm -f && docker-compose up -d && ./shell.sh"
+alias denv="cd ~/devilbox && ./shell.sh"
+alias upgrade="sudo apt update && sudo apt upgrade && sudo apt autoremove && sudo apt autoclean"
+alias grun="grunt clean && grunt exec && grunt less && grunt watch"
+alias mgcmd='magento-cloud mount:download'
+alias mgdd='magento-cloud db:dump'
+```
