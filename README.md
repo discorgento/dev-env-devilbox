@@ -42,15 +42,24 @@ sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 4773BD5E130D1D45
 ### Alias Opcional nano ~/.zshrc
 
 ```
+# configs zsh
 alias zshconf="nano ~/.zshrc"
 alias ohmyzsh="nano ~/.oh-my-zsh"
+# Devilbox subir tudo
 alias dup="cd ~/devilbox && docker-compose up -d && ./shell.sh"
-alias ddown="cd ~/devilbox && docker-compose down && docker-compose stop"
+# Devilbox derrubar tudo
+alias ddown="cd ~/devilbox && docker-compose stop && docker-compose rm -f && docker-compose down"
+# Devilbox os conteiners sao pausados removidos e sao subidos novamente 
 alias dr="cd ~/devilbox && docker-compose stop && docker-compose rm -f && docker-compose up -d && ./shell.sh"
+# Devilbox entrar no ambiente bash container
 alias denv="cd ~/devilbox && ./shell.sh"
+# update e limpeza do sistema
 alias upgrade="sudo apt update && sudo apt upgrade && sudo apt autoremove && sudo apt autoclean"
+# executa o grunt watch
 alias grun="grunt clean && grunt exec && grunt less && grunt watch"
+# faz o clone dos medias do projeto cloud magento
 alias mgcmd='magento-cloud mount:download'
+# faz o dump do banco do projeto cloud magento
 alias mgcdd='magento-cloud db:dump'
 # habilita o xdebug
 alias xh="cd ~/devilbox && sed -i '/PHP_MODULES_DISABLE/s/xdebug/ /g' .env && dr"
