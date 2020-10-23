@@ -46,11 +46,11 @@ sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 4773BD5E130D1D45
 alias zshconf="nano ~/.zshrc"
 alias ohmyzsh="nano ~/.oh-my-zsh"
 # Devilbox subir tudo
-alias dup="cd ~/devilbox && docker-compose up -d && ./shell.sh"
+alias dup="cd ~/devilbox && docker-compose up -d httpd php mysql bind redis elastic && ./shell.sh"
 # Devilbox derrubar tudo
 alias ddown="cd ~/devilbox && docker-compose stop && docker-compose rm -f && docker-compose down"
 # Devilbox os conteiners sao pausados removidos e sao subidos novamente 
-alias dr="cd ~/devilbox && docker-compose stop && docker-compose rm -f && docker-compose up -d && ./shell.sh"
+alias dr="cd ~/devilbox && docker-compose stop && docker-compose rm -f && docker-compose up -d httpd php mysql bind redis elastic && ./shell.sh"
 # Devilbox entrar no ambiente bash container
 alias denv="cd ~/devilbox && ./shell.sh"
 # update e limpeza do sistema
@@ -69,4 +69,5 @@ alias mgcssh="magento-cloud ssh"
 alias xh="cd ~/devilbox && sed -i '/PHP_MODULES_DISABLE/s/xdebug/ /g' .env && dr"
 # desabilita o xdebug
 alias xd="cd ~/devilbox && sed -i '/PHP_MODULES_DISABLE/s/ /xdebug/g' .env && dr"
+
 ```
