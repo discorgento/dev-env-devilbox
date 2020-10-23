@@ -58,9 +58,13 @@ alias upgrade="sudo apt update && sudo apt upgrade && sudo apt autoremove && sud
 # executa o grunt watch
 alias grun="grunt clean && grunt exec && grunt less && grunt watch"
 # faz o clone dos medias do projeto cloud magento
-alias mgcmd='magento-cloud mount:download'
+alias mgcmd="magento-cloud mount:download"
 # faz o dump do banco do projeto cloud magento
-alias mgcdd='magento-cloud db:dump'
+alias mgcdd="magento-cloud db:dump"
+log magento cloud 
+alias mgclog="magento-cloud log"
+ssh magento cloud 
+alias mgcssh="magento-cloud ssh"
 # habilita o xdebug
 alias xh="cd ~/devilbox && sed -i '/PHP_MODULES_DISABLE/s/xdebug/ /g' .env && dr"
 # desabilita o xdebug
