@@ -45,29 +45,19 @@ sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 4773BD5E130D1D45
 # configs zsh
 alias zshconf="nano ~/.zshrc"
 alias ohmyzsh="nano ~/.oh-my-zsh"
-# Devilbox subir tudo
+# Devilbox
 alias dup="cd ~/devilbox && docker-compose up -d httpd php mysql bind redis elastic && ./shell.sh"
-# Devilbox derrubar tudo
 alias ddown="cd ~/devilbox && docker-compose stop && docker-compose rm -f && docker-compose down"
-# Devilbox os conteiners sao pausados removidos e sao subidos novamente 
 alias dr="cd ~/devilbox && docker-compose stop && docker-compose rm -f && docker-compose up -d httpd php mysql bind redis elastic && ./shell.sh"
-# Devilbox entrar no ambiente bash container
 alias denv="cd ~/devilbox && ./shell.sh"
+alias xh="cd ~/devilbox && sed -i '/PHP_MODULES_DISABLE/s/xdebug/ /g' .env && dr"
+alias xd="cd ~/devilbox && sed -i '/PHP_MODULES_DISABLE/s/ /xdebug/g' .env && dr"
+alias grun="grunt clean && grunt exec && grunt less && grunt watch"
+# magento cloud 
+alias mgcmd="magento-cloud mount:download"
+alias mgcdd="magento-cloud db:dump"
+alias mgclog="magento-cloud log"
+alias mgcssh="magento-cloud ssh"
 # update e limpeza do sistema
 alias upgrade="sudo apt update && sudo apt upgrade && sudo apt autoremove && sudo apt autoclean"
-# executa o grunt watch
-alias grun="grunt clean && grunt exec && grunt less && grunt watch"
-# faz o clone dos medias do projeto cloud magento
-alias mgcmd="magento-cloud mount:download"
-# faz o dump do banco do projeto cloud magento
-alias mgcdd="magento-cloud db:dump"
-log magento cloud 
-alias mgclog="magento-cloud log"
-ssh magento cloud 
-alias mgcssh="magento-cloud ssh"
-# habilita o xdebug
-alias xh="cd ~/devilbox && sed -i '/PHP_MODULES_DISABLE/s/xdebug/ /g' .env && dr"
-# desabilita o xdebug
-alias xd="cd ~/devilbox && sed -i '/PHP_MODULES_DISABLE/s/ /xdebug/g' .env && dr"
-
 ```
