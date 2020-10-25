@@ -50,7 +50,7 @@ alias dup="cd ~/devilbox && docker-compose up -d httpd php mysql bind redis elas
 alias ddown="cd ~/devilbox && docker-compose stop && docker-compose rm -f && docker-compose down"
 alias dr="cd ~/devilbox && docker-compose stop && docker-compose rm -f && docker-compose up -d httpd php mysql bind redis elastic && ./shell.sh"
 alias denv="cd ~/devilbox && ./shell.sh"
-alias xh="cd ~/devilbox && sed -i '/PHP_MODULES_DISABLE/s/xdebug/ /g' .env && dr"
+alias xe="cd ~/devilbox && sed -i '/PHP_MODULES_DISABLE/s/xdebug/ /g' .env && dr"
 alias xd="cd ~/devilbox && sed -i '/PHP_MODULES_DISABLE/s/ /xdebug/g' .env && dr"
 alias grun="grunt clean && grunt exec && grunt less && grunt watch"
 # magento cloud 
