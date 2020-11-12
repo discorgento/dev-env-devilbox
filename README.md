@@ -23,7 +23,7 @@ sudo apt update && sudo apt upgrade && sudo apt autoremove && sudo apt autoclean
 ```
 sudo apt install git && cd $HOME && git clone https://github.com/jonatanaxe/DevEnvDevilbox.git && cd DevEnvDevilbox && chmod +x devenvdevilbox.sh && ./devenvdevilbox.sh
 ```
-Você pode selecionar o que deseja instalar, digite a letra pra selecionar e aperte entrer
+Você pode selecionar o que deseja instalar, digite a letra pra selecionar e aperte enter
 
 ![o que deseja instalar](https://i.imgur.com/JqD1Toi.png)
 
