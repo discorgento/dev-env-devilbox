@@ -1,9 +1,0 @@
-[mysqld]
-skip-name-resolve
-connect_timeout = 600
-net_read_timeout = 600
-net_write_timeout = 600
-max_allowed_packet = 256M
-
-[mysqldump]
-;quick
