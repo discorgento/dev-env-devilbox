@@ -13,3 +13,7 @@ alias mgthd='mgbm dev:template-hints:disable && mgcf'
 alias mgredis='mgbm setup:config:set --cache-backend=redis --cache-backend-redis-server=127.0.0.1 --cache-backend-redis-db=0 -n && mgbm setup:config:set --page-cache=redis --page-cache-redis-server=127.0.0.1 --page-cache-redis-db=1 -n && mgbm setup:config:set --session-save=redis --session-save-redis-host=127.0.0.1 --session-save-redis-db=2 -n'
 alias mguseradmin="mgbm admin:user:create --admin-user='hibrido' --admin-password='h1br1d0' --admin-email='hibrido@hibrido.com.br' --admin-firstname='Hibrido' --admin-lastname='Hibrido'"
 alias mguserjonatan="mgbm admin:user:create --admin-user='jonatanmachado' --admin-password='jonatan123@' --admin-email='jonatan@hibrido.com.br' --admin-firstname='Jonatan' --admin-lastname='Machado'"
+alias mgms='mgbm module:status'
+alias mgme='mgbm module:enable'
+alias mgmd='mgbm module:disable'
+alias mgrmgv='rm -rf generated/* var/*'
