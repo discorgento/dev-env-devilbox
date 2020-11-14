@@ -166,9 +166,12 @@ installenv(){
     cd devilbox
 
     wget -c https://raw.githubusercontent.com/jonatanaxe/DevEnvDevilbox/main/devilbox/.env
-    wget -c https://raw.githubusercontent.com/jonatanaxe/DevEnvDevilbox/main/devilbox/bash/aliases.sh
-    wget -c https://raw.githubusercontent.com/jonatanaxe/DevEnvDevilbox/main/devilbox/autostart/update_composer.sh
     wget -c https://raw.githubusercontent.com/jonatanaxe/DevEnvDevilbox/main/devilbox/docker-compose.override.yml
+    cd ~/devilbox/bash/
+    wget -c https://raw.githubusercontent.com/jonatanaxe/DevEnvDevilbox/main/devilbox/bash/aliases.sh
+    cd ~/devilbox/autostart/
+    wget -c https://raw.githubusercontent.com/jonatanaxe/DevEnvDevilbox/main/devilbox/autostart/update_composer.sh
+    
     
     clear
 }
