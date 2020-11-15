@@ -163,7 +163,7 @@ installenv(){
 
     git clone https://github.com/cytopia/devilbox.git
 
-    cd devilbox
+    cd ~/devilbox/
 
     wget -c https://raw.githubusercontent.com/jonatanaxe/DevEnvDevilbox/main/devilbox/.env
     wget -c https://raw.githubusercontent.com/jonatanaxe/DevEnvDevilbox/main/devilbox/docker-compose.override.yml
@@ -171,6 +171,7 @@ installenv(){
     wget -c https://raw.githubusercontent.com/jonatanaxe/DevEnvDevilbox/main/devilbox/bash/aliases.sh
     cd ~/devilbox/autostart/
     wget -c https://raw.githubusercontent.com/jonatanaxe/DevEnvDevilbox/main/devilbox/autostart/update_composer.sh
+    cd ~/devilbox/
     
     
     clear
