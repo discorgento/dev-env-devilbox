@@ -171,8 +171,14 @@ installenv(){
     wget -c https://raw.githubusercontent.com/jonatanaxe/DevEnvDevilbox/main/devilbox/bash/aliases.sh
     cd ~/devilbox/autostart/
     wget -c https://raw.githubusercontent.com/jonatanaxe/DevEnvDevilbox/main/devilbox/autostart/update_composer.sh
-    cd ~/devilbox/
+    cd ~/devilbox/cfg/php-fpm-7.2/
+    wget -c https://raw.githubusercontent.com/jonatanaxe/DevEnvDevilbox/main/devilbox/cfg/php-fpm-x.x/www_server.conf
+    cd ~/devilbox/cfg/php-ini-7.2/
+    wget -c https://raw.githubusercontent.com/jonatanaxe/DevEnvDevilbox/main/devilbox/cfg/php-ini-x.x/memory_limit.ini
+    wget -c https://raw.githubusercontent.com/jonatanaxe/DevEnvDevilbox/main/devilbox/cfg/php-ini-x.x/timeouts.ini
+    wget -c https://raw.githubusercontent.com/jonatanaxe/DevEnvDevilbox/main/devilbox/cfg/php-ini-x.x/xdebug.ini
     
+    cd ~/devilbox/
     
     clear
 }
