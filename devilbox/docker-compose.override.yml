@@ -9,7 +9,7 @@ services:
   # ELK Stack
   # -----------------------------------------------------------------------------------------------
   elastic:
-    image: docker.elastic.co/elasticsearch/elasticsearch-oss:${ELK_SERVER:-6.6.1}
+    image: docker.elastic.co/elasticsearch/elasticsearch-oss:${ELK_SERVER:-7.6.2}
     hostname: elastic
     ports:
       - "${LOCAL_LISTEN_ADDR}${HOST_PORT_ELK_ELASTIC:-9200}:9200"
@@ -23,7 +23,7 @@ services:
       - devilbox-elastic:/usr/share/elasticsearch/data
 
   # logstash:
-  #   image: docker.elastic.co/logstash/logstash-oss:${ELK_SERVER:-6.6.1}
+  #   image: docker.elastic.co/logstash/logstash-oss:${ELK_SERVER:-7.6.2}
   #   hostname: logstash
   #   ports:
   #     - "${LOCAL_LISTEN_ADDR}${HOST_PORT_ELK_LOGSTASH:-9600}:9600"
@@ -44,7 +44,7 @@ services:
   #     - elastic
 
   # kibana:
-  #   image: docker.elastic.co/kibana/kibana-oss:${ELK_SERVER:-6.6.1}
+  #   image: docker.elastic.co/kibana/kibana-oss:${ELK_SERVER:-7.6.2}
   #   hostname: kibana
   #   ports:
   #     - "${LOCAL_LISTEN_ADDR}${HOST_PORT_ELK_KIBANA:-5601}:5601"
