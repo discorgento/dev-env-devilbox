@@ -50,8 +50,8 @@ alias dup="cd ~/devilbox && docker-compose up -d httpd php mysql bind redis elas
 alias ddown="cd ~/devilbox && docker-compose stop && docker-compose rm -f && docker-compose down"
 alias dr="cd ~/devilbox && docker-compose stop && docker-compose rm -f && docker-compose up -d httpd php mysql bind redis elastic && ./shell.sh"
 alias denv="cd ~/devilbox && ./shell.sh"
-alias xd='cd ~/devilbox && sed -i "/PHP_MODULES_DISABLE/s/xdebugxe/xdebug/g" .env && dr'
-alias xe='cd ~/devilbox && sed -i "/PHP_MODULES_DISABLE/s/xdebug/xdebugxe/g" .env && dr'
+xd='cd ~/devilbox && sed -i "/PHP_MODULES_DISABLE/s/xdxe/xdebug/g" .env && dr'
+xe='cd ~/devilbox && sed -i "/PHP_MODULES_DISABLE/s/xdebug/xdxe/g" .env && dr'
 alias grun="grunt clean && grunt exec && grunt less && grunt watch"
 # magento cloud 
 alias mgcmd="magento-cloud mount:download"
