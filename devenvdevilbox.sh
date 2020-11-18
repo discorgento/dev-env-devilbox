@@ -159,7 +159,7 @@ installenv(){
     sudo chmod +x /usr/local/bin/docker-compose
 
     echo "Install Devilbox"
-    cd $HOME
+    cd ~
 
     git clone https://github.com/cytopia/devilbox.git
 
@@ -196,7 +196,7 @@ Jonatan Machado
     echo "
 Ambiente Desenvolvimento DevilBox
 Entre na pasta
-    cd $HOME/devilbox
+    cd ~/devilbox
 Comando para subir containers
     docker-compose up
 Comando para derrubar os containers
