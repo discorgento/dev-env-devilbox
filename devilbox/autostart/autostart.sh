@@ -2,7 +2,8 @@
 
 #composer
 composer-1 global require --dev mage2tv/magento-cache-clean \
-	&& mv /root/.composer /home/devilbox/.composer
+	&& mv /root/.composer /home/devilbox/.composer \
+	&& sudo chown -R devilbox /home/devilbox/.composer
 
 #n98
 wget https://files.magerun.net/n98-magerun2.phar \
