@@ -1,4 +1,4 @@
-# DevEnvDevilbox Ubuntu 20.04
+# DevEnvDevilbox Ubuntu 20.10
 
 **[important]
 Caso não for uma instalação limpa do ubuntu, verifique os repositorios abaixo se for instalar os apps ja estao no seu sistema e remova para nao ser duplicados**
