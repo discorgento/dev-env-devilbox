@@ -1,7 +1,7 @@
 
 #!/bin/bash
 
-echo "Install Pré-requisito"
+echo "Install Prerequisite"
 sudo apt install \
     curl \
     wget \
@@ -15,38 +15,38 @@ clear
 installapps(){
 
     echo -n "
-    Qual app deseja instalar?
+    Which APP do you want to install?
         (V)scode
         (C)hrome
         (T)ilix
         (S)potify
         (A)ll
-        (E)xit/não quero instalar apps
+        (E)xit/I don't want to install apps
 "
-read respostaapps
-case "$respostaapps" in
+read answerapps
+case "$answerapps" in
     v|V)
         vscode
         clear
-        echo "Instalado vscode"
+        echo "Installed vscode"
         installapps
     ;;
     c|C)
         chrome
         clear
-        echo "Instalado google chrome"
+        echo "Installed google chrome"
         installapps
     ;;
     t|T)
         tilix
         clear
-        echo "Instalado tilix"
+        echo "Installed tilix"
         installapps
     ;;
     s|S)
         spotify
         clear
-        echo "Instalado spotify"
+        echo "Installed spotify"
         installapps
     ;;
     a|A)
@@ -55,15 +55,15 @@ case "$respostaapps" in
         tilix
         spotify
         clear
-        echo "Instalado vscode, chrome, tilix e spotify"
+        echo "Installed vscode, chrome, tilix e spotify"
     ;;
     e|E)
         clear
-        echo "Xau..."
+        echo "Bye..."
     ;;
     *|"")
         clear
-        echo "Opção inválida"
+        echo "Invalid option"
         installapps
     ;;
 esac
@@ -73,59 +73,59 @@ esac
 
 tilix(){
     clear
-    echo "***Instalando tilix"
+    echo "***Installed tilix"
     sudo apt -y install tilix
 }
 
 vscode(){
     clear
-    echo "Adicionar repositorio vscode? y/n"
+    echo "Add vscode repository? y/n"
     read repovscode
     if [ $repovscode = "y" ]
     then
         wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add --
         sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
         sudo apt update
-        echo "***Repositorio vscode adicionado"
+        echo "***Vscode repository added"
     else
-        echo "***Não Adicionado Repositorio"
+        echo "***Not Added Repository Vscode"
     fi
-    echo "***Instalando vscode"
+    echo "***Installing vscode"
     sudo apt -y install code
 }
 
 chrome(){
     clear
-    echo "Adicionar repositorio chrome? y/n"
+    echo "Add chrome repository? y/n"
     read repochrome
     if [ $repochrome = "y" ]
     then
         wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
         sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
         sudo apt update
-        echo "***Repositorio chrome adicionado"
+        echo "***Chrome repository added"
     else
-        echo "***Não Adicionado Repositorio"
+        echo "***Do not add repository Chrome"
     fi
-    echo "***Instalando google chrome"
+    echo "***Installing google chrome"
     sudo apt -y install google-chrome-stable
 }
 
 spotify(){
     clear
-    echo "Adicionar repositorio spotify? y/n"
+    echo "Add spotify repository? y/n"
     read repospotify
     if [ $repospotify = "y" ]
     then
         curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add -
         echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
         sudo apt update
-        echo "***Repositorio spotify adicionado"
+        echo "***Spotify repository added"
 
     else
-        echo "***Não Adicionado Repositorio"
+        echo "***Do not add repository Spotify"
     fi
-    echo "***Instalando spotify"
+    echo "***Installing spotify"
     sudo apt -y install spotify-client
 }
 
@@ -134,7 +134,7 @@ spotify(){
 installenv(){
     echo "Install Docker"
 
-    echo "Adicionar repositorio docker? y/n"
+    echo "Add docker repository? y/n"
     read repodocker
     if [ $repodocker = "y" ]
     then
@@ -143,9 +143,9 @@ installenv(){
         "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
         $(lsb_release -cs) \
         stable"
-        echo "***Repositorio docker adicionado"  
+        echo "***Docker repository added"  
     else
-        echo "***Não Adicionado Repositorio"
+        echo "***Do not add repository Docker"
     fi
 
     sudo apt update
@@ -154,7 +154,7 @@ installenv(){
     apt-cache policy docker-ce
     sudo apt install docker-ce
 
-    echo "Aplicando permissão user Docker"
+    echo "Applying user Docker permission"
     sudo usermod -aG docker ${USER}
 
     echo "Install docker-compose 1.27.4"
@@ -190,24 +190,28 @@ installenv(){
 welcomeenv(){
     echo "
 ####################
-Ambiente instalado :D
-Caso tenha problema para iniciar o docker reinicie o sistema
-Obs(guarde esses comandos e links abaixo)
+Installed environment :D
+If you have trouble starting the docker, restart the system
+Obs (save these commands and links below)
 Abraços
 Jonatan Machado
+Read the readme.md
 ####################
     "
     echo "
-Ambiente Desenvolvimento DevilBox
-Entre na pasta
+Environment Development DevilBox
+
+Enter the folder
     cd ~/devilbox
-Comando para subir containers
+    
+Command to lift containers
     docker-compose up
+    
 Comando para derrubar os containers
     docker-compose down
     "
     echo "
-Links uteis
+Useful links
 Devilbox DOC -> https://devilbox.readthedocs.io/en/latest/
 Gnome Docker -> https://extensions.gnome.org/extension/2224/easy-docker-containers/
 VSCODE Docker -> https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker
@@ -215,14 +219,14 @@ VSCODE Docker -> https://marketplace.visualstudio.com/items?itemName=ms-azuretoo
 }
 
 echo -n "
-    O que deseja instalar?
+    What you want to install?
         (A)pps
         (D)evilBox
-        (T)udo
+        (C)omplete
         (E)xit
 "
-read resposta
-case "$resposta" in
+read answerini
+case "$answerini" in
     a|A)
         installapps
     ;;
@@ -230,17 +234,17 @@ case "$resposta" in
         installenv
         welcomeenv
     ;;
-    t|T)
+    c|C)
         installapps
         installenv
         welcomeenv
     ;;
     e|E)
         clear
-        echo "Xau..."
+        echo "Bye..."
     ;;
     *|"")
         clear
-        echo "Opção inválida"
+        echo "Invalid option"
     ;;
 esac
