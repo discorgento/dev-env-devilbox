@@ -1,7 +1,7 @@
 # DevEnvDevilbox Ubuntu 20.10
 
 **[important]
-Caso não for uma instalação limpa do ubuntu, verifique os repositorios abaixo se for instalar os apps ja estao no seu sistema e remova para nao ser duplicados**
+If it is not a clean install of ubuntu, check the repositories below if you are going to install the apps already on your system and remove them not to be duplicated**
 ```
 http://repository.spotify.com
 https://packages.microsoft.com/repos/vscode
@@ -10,42 +10,42 @@ http://dl.google.com/linux/chrome/deb/
 ```
 ![repo](https://i.imgur.com/Jk4Uy6S.png)
 
-## Instalação 
+## Installation 
 
-### Faça o update do sistema
+### Update the system
 
 ```
 sudo apt update && sudo apt upgrade && sudo apt autoremove && sudo apt autoclean
 ```
 
-### Agora rode esse comando para começar a instalação
+### Now run this command to start the installation
 
 ```
 sudo apt install git && cd ~ && git clone https://github.com/jonatanaxe/DevEnvDevilbox.git && cd DevEnvDevilbox && chmod +x devenvdevilbox.sh && ./devenvdevilbox.sh
 ```
-Você pode selecionar o que deseja instalar, digite a letra pra selecionar e aperte enter
+You can select what you want to install, type the letter to select and press enter
 
-![o que deseja instalar](https://i.imgur.com/mUXblDd.png)
+![what do you want to install](https://i.imgur.com/mUXblDd.png)
 
-Caso selecione os apps ou tudo vai ter um outro menu assim 
+If you select the apps or everything will have another menu like this
 
 ![install apps](https://i.imgur.com/Dlo55J9.png)
 
 
-### Erros possiveis
+### Possible errors
 
-Possível erro de apt-key rode esse comando abaixo altere no final por sua key
+Possible apt-key error run the command below change at the end by your key
 ```
 sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 4773BD5E130D1D45
 ```
 
-### Alias Opcional nano ~/.zshrc
+### Optional Alias nano ~/.zshrc
 
 ```
-# configs zsh
+# zsh configs
 alias zshconf='nano ~/.zshrc'
 alias ohmyzsh='nano ~/.oh-my-zsh'
-# Devilbox
+# devilbox
 alias dup='cd ~/devilbox && docker-compose up -d httpd php mysql bind redis elastic && ./shell.sh'
 alias ddown='cd ~/devilbox && docker-compose stop && docker-compose rm -f && docker-compose down'
 alias dr='cd ~/devilbox && docker-compose stop && docker-compose rm -f && docker-compose up -d httpd php mysql bind redis elastic && ./shell.sh'
@@ -58,6 +58,6 @@ alias mgcmd='magento-cloud mount:download'
 alias mgcdd='magento-cloud db:dump'
 alias mgclog='magento-cloud log'
 alias mgcssh='magento-cloud ssh'
-# update e limpeza do sistema
+# system update and cleaning
 alias upgrade='sudo apt update && sudo apt upgrade && sudo apt autoremove && sudo apt autoclean'
 ```
