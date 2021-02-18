@@ -1,6 +1,8 @@
 alias l='ls -a --color=auto'
 alias ll='ls -al --color=auto'
 alias grep='grep --colour=auto'
+alias cl='clear'
+alias q='exit'
 alias www='cd /shared/httpd'
 alias grun='grunt clean && grunt exec && grunt less && grunt watch'
 alias mgcp='./vendor/bin/ece-tools patch'
