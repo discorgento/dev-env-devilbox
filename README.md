@@ -25,11 +25,11 @@ sudo apt install git && cd ~ && git clone https://github.com/jonatanaxe/DevEnvDe
 ```
 Você pode selecionar o que deseja instalar, digite a letra pra selecionar e aperte enter
 
-![o que deseja instalar](https://i.imgur.com/JqD1Toi.png)
+![o que deseja instalar](https://i.imgur.com/mUXblDd.png)
 
 Caso selecione os apps ou tudo vai ter um outro menu assim 
 
-![install apps](https://i.imgur.com/gOMsclV.png)
+![install apps](https://i.imgur.com/Dlo55J9.png)
 
 
 ### Erros possiveis
