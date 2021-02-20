@@ -240,8 +240,8 @@ echo -n "
         (S)oftware
         (D)evilBox
         (C)omplete
-        (E)xit
         (A)liases
+        (E)xit
 "
 read answerini
 case "$answerini" in
@@ -255,6 +255,7 @@ case "$answerini" in
     c|C)
         installapps
         installenv
+        aliases
         welcomeenv
     ;;
     a|A)
