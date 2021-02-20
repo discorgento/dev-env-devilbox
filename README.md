@@ -39,7 +39,7 @@ Possible apt-key error run the command below change at the end by your key
 sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 4773BD5E130D1D45
 ```
 
-### Optional Alias nano ~/.zshrc
+### Optional Alias
 
 https://github.com/jonatanaxe/DevEnvDevilbox/blob/main/devilbox/.aliases
 
