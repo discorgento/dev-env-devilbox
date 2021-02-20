@@ -41,25 +41,5 @@ sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 4773BD5E130D1D45
 
 ### Optional Alias nano ~/.zshrc
 
-```
-# zsh configs
-alias zshconf='nano ~/.zshrc'
-alias ohmyzsh='nano ~/.oh-my-zsh'
-# devilbox
-alias dup='cd ~/devilbox && docker-compose up -d httpd php mysql bind redis elastic && ./shell.sh'
-alias ddown='cd ~/devilbox && docker-compose stop && docker-compose rm -f && docker-compose down'
-alias dr='cd ~/devilbox && docker-compose stop && docker-compose rm -f && docker-compose up -d httpd php mysql bind redis elastic && ./shell.sh'
-alias denv='cd ~/devilbox && ./shell.sh'
-alias xe="cd ~/devilbox && sed -i '/PHP_MODULES_DISABLE/s/xdebug/xdxe/g' .env && dr"
-alias xd="cd ~/devilbox && sed -i '/PHP_MODULES_DISABLE/s/xdxe/xdebug/g' .env && dr"
-alias grun='grunt clean && grunt exec && grunt less && grunt watch'
-# magento cloud 
-alias mgcmd='magento-cloud mount:download'
-alias mgcdd='magento-cloud db:dump'
-alias mgclog='magento-cloud log'
-alias mgcssh='magento-cloud ssh'
-# system update and cleaning
-alias upgrade='sudo apt update && sudo apt upgrade && sudo apt autoremove && sudo apt autoclean'
-alias cl='clear'
-alias q='exit'
-```
+https://github.com/jonatanaxe/DevEnvDevilbox/blob/main/devilbox/.aliases
+
