@@ -1,4 +1,4 @@
-# configs alias
+# configs aliases
 alias aliasconf='nano ~/.aliases'
 # Devilbox
 alias dup='cd ~/devilbox && docker-compose up -d httpd php mysql bind redis elastic && ./shell.sh'
