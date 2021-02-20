@@ -60,4 +60,6 @@ alias mgclog='magento-cloud log'
 alias mgcssh='magento-cloud ssh'
 # system update and cleaning
 alias upgrade='sudo apt update && sudo apt upgrade && sudo apt autoremove && sudo apt autoclean'
+alias cl='clear'
+alias q='exit'
 ```
