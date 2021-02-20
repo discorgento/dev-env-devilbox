@@ -25,19 +25,12 @@ sudo apt install git && cd ~ && git clone https://github.com/jonatanaxe/DevEnvDe
 ```
 You can select what you want to install, type the letter to select and press enter
 
-![what do you want to install](https://i.imgur.com/mUXblDd.png)
+![what do you want to install](https://i.imgur.com/tdlXnrF.png)
 
 If you select the apps or everything will have another menu like this
 
 ![install apps](https://i.imgur.com/Dlo55J9.png)
 
-
-### Possible errors
-
-Possible apt-key error run the command below change at the end by your key
-```
-sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 4773BD5E130D1D45
-```
 
 ### Optional Alias
 
