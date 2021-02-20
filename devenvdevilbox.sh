@@ -187,6 +187,23 @@ installenv(){
     clear
 }
 
+aliases(){
+    clear
+    echo "Add Aliases? y/n"
+    read aliases
+    if [ $aliases = "y" ]
+    then
+        echo "if [ -f ~/.aliases ]; then
+        source ~/.aliases
+        fi" >> ~/.zshrc
+        cd ~
+        wget -c https://raw.githubusercontent.com/jonatanaxe/DevEnvDevilbox/main/devilbox/.aliases
+        echo "***Aliases added"
+    else
+        echo "***Do not add Aliases"
+    fi
+}
+
 welcomeenv(){
     echo "
 ####################
@@ -220,14 +237,15 @@ VSCODE Docker -> https://marketplace.visualstudio.com/items?itemName=ms-azuretoo
 
 echo -n "
     What you want to install?
-        (A)pps
+        (S)oftware
         (D)evilBox
         (C)omplete
         (E)xit
+        (A)liases
 "
 read answerini
 case "$answerini" in
-    a|A)
+    s|S)
         installapps
     ;;
     d|D)
@@ -237,6 +255,10 @@ case "$answerini" in
     c|C)
         installapps
         installenv
+        welcomeenv
+    ;;
+    a|A)
+        aliases
         welcomeenv
     ;;
     e|E)
