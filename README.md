@@ -8,7 +8,6 @@ https://packages.microsoft.com/repos/vscode
 https://download.docker.com/linux/ubuntu
 http://dl.google.com/linux/chrome/deb/
 ```
-![repo](https://i.imgur.com/Jk4Uy6S.png)
 
 ## Installation 
 
@@ -21,7 +20,10 @@ sudo apt update && sudo apt upgrade && sudo apt autoremove && sudo apt autoclean
 ### Now run this command to start the installation
 
 ```
-sudo apt install git && cd ~ && git clone https://github.com/jonatanaxe/DevEnvDevilbox.git && cd DevEnvDevilbox && chmod +x devenvdevilbox.sh && ./devenvdevilbox.sh
+cd ~ \ 
+  && wget -c https://raw.githubusercontent.com/jonatanaxe/DevEnvDevilbox/main/devenvdevilbox.sh \
+  && chmod +x devenvdevilbox.sh \ 
+  && ./devenvdevilbox.sh
 ```
 You can select what you want to install, type the letter to select and press enter
 
