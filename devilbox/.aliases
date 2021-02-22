@@ -9,7 +9,7 @@ alias xe="cd ~/devilbox && sed -i '/PHP_MODULES_DISABLE/s/xdebug/xdxe/g' .env &&
 alias xd="cd ~/devilbox && sed -i '/PHP_MODULES_DISABLE/s/xdxe/xdebug/g' .env && dr"
 alias grun='grunt clean && grunt exec && grunt less && grunt watch'
 # magento cloud
-alias mgcmd='magento-cloud mount:download'
+alias mgcmd='magento-cloud mount:download --mount pub/media --target pub/media --exclude catalog/product/cache --exclude tmp --exclude .\* -y'
 alias mgcdd='magento-cloud db:dump'
 alias mgclog='magento-cloud log'
 alias mgcssh='magento-cloud ssh'
