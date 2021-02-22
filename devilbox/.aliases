@@ -13,7 +13,7 @@ alias mgcmd='magento-cloud mount:download'
 alias mgcdd='magento-cloud db:dump'
 alias mgclog='magento-cloud log'
 alias mgcssh='magento-cloud ssh'
-# update e limpeza do sistema
+# system
 alias upgrade='sudo apt update && sudo apt upgrade && sudo apt autoremove && sudo apt autoclean'
 alias ehosts='sudo nano /etc/hosts'
 alias cl='clear'
