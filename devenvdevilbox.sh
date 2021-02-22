@@ -224,7 +224,7 @@ Enter the folder
 Command to lift containers
     docker-compose up
     
-Comando para derrubar os containers
+Command to drop the containers
     docker-compose down
     "
     echo "
