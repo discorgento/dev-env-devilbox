@@ -18,4 +18,7 @@ alias upgrade='sudo apt update && sudo apt upgrade && sudo apt autoremove && sud
 alias ehosts='sudo nano /etc/hosts'
 alias cl='clear'
 alias q='exit'
+alias l='ls -a --color=auto'
+alias ll='ls -al --color=auto'
+alias ls='ls -p --color=always --group-directories-first'
 alias www='cd ~/devilbox/data/www && pwd && l'
