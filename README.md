@@ -38,3 +38,5 @@ If you select the apps or everything will have another menu like this
 
 https://github.com/jonatanaxe/DevEnvDevilbox/blob/main/devilbox/.aliases
 
+🐓
+
