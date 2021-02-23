@@ -10,7 +10,7 @@ alias xd="cd ~/devilbox && sed -i '/PHP_MODULES_DISABLE/s/xdxe/xdebug/g' .env &&
 alias grun='grunt clean && grunt exec && grunt less && grunt watch'
 # magento cloud
 alias mgcmd='magento-cloud mount:download --mount pub/media --target pub/media --exclude catalog/product/cache --exclude tmp --exclude .\* -y'
-alias mgcdd='magento-cloud db:dump --exclude-table="email_abandoned_cart email_automation email_campaign email_catalog email_contact email_contact_consent email_coupon_attribute email_failed_auth email_importer email_order email_review email_rules email_wishlist persistent_session report_compared_product_index report_event report_viewed_product_aggregated_daily report_viewed_product_aggregated_monthly report_viewed_product_aggregated_yearly report_viewed_product_index reporting_counts reporting_module_status reporting_orders reporting_system_updates reporting_users session" --file=mage_${PWD##*/}-$(date +"%Y_%m_%d_%I_%M_%p").sql'
+alias mgcdd='magento-cloud db:dump --exclude-table="email_abandoned_cart email_automation email_campaign email_catalog email_contact email_contact_consent email_coupon_attribute email_failed_auth email_importer email_order email_review email_rules email_wishlist persistent_session report_compared_product_index report_event report_viewed_product_aggregated_daily report_viewed_product_aggregated_monthly report_viewed_product_aggregated_yearly report_viewed_product_index reporting_counts reporting_module_status reporting_orders reporting_system_updates reporting_users session" --file=mage_${PWD##*/}_$(date +"%d-%m-%Y").sql'
 alias mgclog='magento-cloud log'
 alias mgcssh='magento-cloud ssh'
 # update
