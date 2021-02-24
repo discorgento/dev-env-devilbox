@@ -16,6 +16,7 @@ alias mgcssh='magento-cloud ssh'
 # update
 alias upgrade='sudo apt update && sudo apt upgrade && sudo apt autoremove && sudo apt autoclean'
 alias ehosts='sudo nano /etc/hosts'
+alias ehostset='sudo sed -i "2i127.0.0.1  ${PWD##*/}.local" /etc/hosts'
 alias cl='clear'
 alias q='exit'
 alias l='ls -a --color=auto'
