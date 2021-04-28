@@ -1,4 +1,4 @@
-# 🏴‍☠️DevEnvDevilbox Ubuntu 19.10/20.04/20.10
+# 🏴‍☠️DevEnvDevilbox Ubuntu 20.10/21.04
 
 **[important]
 If it is not a clean install of ubuntu, check the repositories below if you are going to install the apps already on your system and remove them not to be duplicated**
