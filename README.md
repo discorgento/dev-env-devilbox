@@ -3,11 +3,15 @@
 **[important]
 If it is not a clean install of ubuntu, check the repositories below if you are going to install the apps already on your system and remove them not to be duplicated**
 ```
-http://repository.spotify.com
 https://packages.microsoft.com/repos/vscode
 https://download.docker.com/linux/ubuntu
 http://dl.google.com/linux/chrome/deb/
 ```
+About Devilbox
+A modern Docker LAMP stack and MEAN stack for local development
+
+http://devilbox.org/
+https://github.com/cytopia/devilbox
 
 ## Installation 
 
