@@ -20,7 +20,7 @@ sudo apt update && sudo apt upgrade && sudo apt autoremove && sudo apt autoclean
 ### Now run this command to start the installation
 
 ```
-cd ~ && curl https://git.io/J3Bw2 -o devenvdevilbox.sh && chmod +x devenvdevilbox.sh && ./devenvdevilbox.sh
+cd ~ && curl -O https://raw.githubusercontent.com/jonatanaxe/DevEnvDevilbox/main/devenvdevilbox.sh && chmod +x devenvdevilbox.sh && ./devenvdevilbox.sh
 ```
 You can select what you want to install, type the letter to select and press enter
 
