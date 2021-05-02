@@ -19,7 +19,6 @@ installapps(){
         (V)scode
         (C)hrome
         (T)ilix
-        (S)potify
         (A)ll
         (E)xit/I don't want to install apps
 "
@@ -43,17 +42,10 @@ case "$answerapps" in
         echo "Installed tilix"
         installapps
     ;;
-    s|S)
-        spotify
-        clear
-        echo "Installed spotify"
-        installapps
-    ;;
     a|A)
         vscode
         chrome
         tilix
-        spotify
         clear
         echo "Installed vscode, chrome, tilix e spotify"
     ;;
@@ -110,26 +102,6 @@ chrome(){
     echo "***Installing google chrome"
     sudo apt -y install google-chrome-stable
 }
-
-spotify(){
-    clear
-    echo "Add spotify repository? y/n"
-    read repospotify
-    if [ $repospotify = "y" ]
-    then
-        curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add -
-        echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
-        sudo apt update
-        echo "***Spotify repository added"
-
-    else
-        echo "***Do not add repository Spotify"
-    fi
-    echo "***Installing spotify"
-    sudo apt -y install spotify-client
-}
-
-
 
 installenv(){
     echo "Install Docker"
