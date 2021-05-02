@@ -20,10 +20,7 @@ sudo apt update && sudo apt upgrade && sudo apt autoremove && sudo apt autoclean
 ### Now run this command to start the installation
 
 ```
-cd ~ \ 
-  && wget -c https://raw.githubusercontent.com/jonatanaxe/DevEnvDevilbox/main/devenvdevilbox.sh \
-  && chmod +x devenvdevilbox.sh \ 
-  && ./devenvdevilbox.sh
+cd ~ && wget -c https://raw.githubusercontent.com/jonatanaxe/DevEnvDevilbox/main/devenvdevilbox.sh && chmod +x devenvdevilbox.sh && ./devenvdevilbox.sh
 ```
 You can select what you want to install, type the letter to select and press enter
 
