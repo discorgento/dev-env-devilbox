@@ -1,6 +1,14 @@
 # 🏴‍☠️DevEnvDevilbox Ubuntu 19|20|21
 
-About Devilbox
+- aliases
+- global mage2tv/magento-cache-clean
+- global n98-magerun2
+- xdebug3
+- composer 1
+- composer 2
+- devilbox v1.9.0
+
+# About Devilbox
 
 A modern Docker LAMP stack and MEAN stack for local development
 
