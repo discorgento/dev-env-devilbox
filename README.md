@@ -49,14 +49,14 @@ https://github.com/jonatanaxe/DevEnvDevilbox/blob/main/devilbox/.aliases
 composer create-project --repository-url=https://repo.magento.com/ magento/project-community-edition ./
 
 bin/magento setup:install \
---base-url=http://magento2.local \
+--base-url=http://magento.local \
 --db-host=127.0.0.1 \
---db-name=mage_magento2 \
+--db-name=mage_magento \
 --db-user=root \
 --db-password= \
 --admin-firstname=Jonatan \
 --admin-lastname=Machado \
---admin-email=jonatanaxe@outlook.com \
+--admin-email=jonatanaxe@pm.me \
 --admin-user=admin \
 --admin-password=admin123 \
 --language=en_US \
