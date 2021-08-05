@@ -42,5 +42,27 @@ If you select the apps or everything will have another menu like this
 
 https://github.com/jonatanaxe/DevEnvDevilbox/blob/main/devilbox/.aliases
 
+
+### install magento 2
+
+```
+bin/magento setup:install \
+--base-url=http://magento2.local \
+--db-host=127.0.0.1 \
+--db-name=mage_magento2 \
+--db-user=root \
+--db-password= \
+--admin-firstname=Jonatan \
+--admin-lastname=Machado \
+--admin-email=jonatanaxe@outlook.com \
+--admin-user=admin \
+--admin-password=admin123 \
+--language=en_US \
+--currency=BRL \
+--timezone=America/Sao_Paulo \
+--use-rewrites=1 \
+--elasticsearch-host=172.16.238.240 
+```
+
 🐓
 
