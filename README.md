@@ -46,6 +46,8 @@ https://github.com/jonatanaxe/DevEnvDevilbox/blob/main/devilbox/.aliases
 ### Install magento 2
 
 ```
+composer create-project --repository-url=https://repo.magento.com/ magento/project-community-edition ./
+
 bin/magento setup:install \
 --base-url=http://magento2.local \
 --db-host=127.0.0.1 \
