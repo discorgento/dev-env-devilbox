@@ -43,7 +43,7 @@ If you select the apps or everything will have another menu like this
 https://github.com/jonatanaxe/DevEnvDevilbox/blob/main/devilbox/.aliases
 
 
-### install magento 2
+### Install magento 2
 
 ```
 bin/magento setup:install \
