@@ -11,6 +11,9 @@ services:
   elastic:
     image: docker.elastic.co/elasticsearch/elasticsearch-oss:${ELK_SERVER:-7.6.2}
     hostname: elastic
+    mem_limit: 2g
+    mem_reservation: 1G
+    cpus: 0.5
     ports:
       - "${LOCAL_LISTEN_ADDR}${HOST_PORT_ELK_ELASTIC:-9200}:9200"
     networks:
@@ -25,6 +28,9 @@ services:
   # logstash:
   #   image: docker.elastic.co/logstash/logstash-oss:${ELK_SERVER:-7.6.2}
   #   hostname: logstash
+  #   mem_limit: 2g
+  #   mem_reservation: 1G
+  #   cpus: 0.5
   #   ports:
   #     - "${LOCAL_LISTEN_ADDR}${HOST_PORT_ELK_LOGSTASH:-9600}:9600"
   #   networks:
@@ -46,6 +52,8 @@ services:
   # kibana:
   #   image: docker.elastic.co/kibana/kibana-oss:${ELK_SERVER:-7.6.2}
   #   hostname: kibana
+  #   mem_limit: 2g
+  #   mem_reservation: 1G
   #   ports:
   #     - "${LOCAL_LISTEN_ADDR}${HOST_PORT_ELK_KIBANA:-5601}:5601"
   #   networks:
