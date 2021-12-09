@@ -140,9 +140,11 @@ installenv(){
     git clone https://github.com/cytopia/devilbox.git
 
     cd ~/devilbox/
-
     wget -c https://raw.githubusercontent.com/jonatanaxe/DevEnvDevilbox/main/devilbox/.env
     wget -c https://raw.githubusercontent.com/jonatanaxe/DevEnvDevilbox/main/devilbox/docker-compose.override.yml
+    mkdir sh
+    cd ~/devilbox/sh
+    wget -c https://raw.githubusercontent.com/jonatanaxe/DevEnvDevilbox/main/devilbox/sh/docker-entrypoint-es.sh
     cd ~/devilbox/bash/
     wget -c https://raw.githubusercontent.com/jonatanaxe/DevEnvDevilbox/main/devilbox/bash/aliases.sh
     cd ~/devilbox/autostart/
@@ -153,7 +155,6 @@ installenv(){
     wget -c https://raw.githubusercontent.com/jonatanaxe/DevEnvDevilbox/main/devilbox/cfg/php-ini-x.x/memory_limit.ini
     wget -c https://raw.githubusercontent.com/jonatanaxe/DevEnvDevilbox/main/devilbox/cfg/php-ini-x.x/timeouts.ini
     wget -c https://raw.githubusercontent.com/jonatanaxe/DevEnvDevilbox/main/devilbox/cfg/php-ini-x.x/xdebug.ini
-    
     cd ~/devilbox/
     
     clear
