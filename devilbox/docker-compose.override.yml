@@ -10,7 +10,7 @@ services:
   # -----------------------------------------------------------------------------------------------
   elastic:
     image: docker.elastic.co/elasticsearch/elasticsearch-oss:${ELK_SERVER:-7.6.2}
-    hostname: elastic
+    hostname: elasticsearch
     mem_limit: 2g
     mem_reservation: 1G
     cpus: 0.5
@@ -23,14 +23,13 @@ services:
       - TZ=${TIMEZONE:-UTC}
       - discovery.type=single-node
     volumes:
-      - devilbox-elastic:/usr/share/elasticsearch/data
+      - devilbox-elastic:/usr/share/elasticsearch/data;
+      - ./sh/docker-entrypoint-es.sh:/usr/share/elasticsearch/docker-entrypoint-es.sh
+    entrypoint: /usr/share/elasticsearch/docker-entrypoint-es.sh
 
   # logstash:
   #   image: docker.elastic.co/logstash/logstash-oss:${ELK_SERVER:-7.6.2}
   #   hostname: logstash
-  #   mem_limit: 2g
-  #   mem_reservation: 1G
-  #   cpus: 0.5
   #   ports:
   #     - "${LOCAL_LISTEN_ADDR}${HOST_PORT_ELK_LOGSTASH:-9600}:9600"
   #   networks:
@@ -52,8 +51,6 @@ services:
   # kibana:
   #   image: docker.elastic.co/kibana/kibana-oss:${ELK_SERVER:-7.6.2}
   #   hostname: kibana
-  #   mem_limit: 2g
-  #   mem_reservation: 1G
   #   ports:
   #     - "${LOCAL_LISTEN_ADDR}${HOST_PORT_ELK_KIBANA:-5601}:5601"
   #   networks:
