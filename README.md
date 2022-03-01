@@ -27,7 +27,7 @@ sudo apt update && sudo apt upgrade && sudo apt autoremove && sudo apt autoclean
 ### Now run this command to start the installation
 
 ```
-cd ~ && curl -O https://raw.githubusercontent.com/jonatanaxe/DevEnvDevilbox/main/devenvdevilbox.sh && chmod +x devenvdevilbox.sh && ./devenvdevilbox.sh
+cd ~ && curl -O https://raw.githubusercontent.com/Discorgento/DevEnvDevilbox/main/devenvdevilbox.sh && chmod +x devenvdevilbox.sh && ./devenvdevilbox.sh
 ```
 You can select what you want to install, type the letter to select and press enter
 
@@ -40,7 +40,7 @@ If you select the apps or everything will have another menu like this
 
 ### Optional Alias
 
-https://github.com/jonatanaxe/DevEnvDevilbox/blob/main/devilbox/.aliases
+https://github.com/Discorgento/DevEnvDevilbox/blob/main/devilbox/.aliases
 
 
 ### Install magento 2
