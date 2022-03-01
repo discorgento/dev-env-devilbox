@@ -6,7 +6,7 @@
 - xdebug3
 - composer 1
 - composer 2
-- devilbox v1.9.2
+- devilbox v1.10.4
 
 # About Devilbox
 
