@@ -27,7 +27,7 @@ sudo apt update && sudo apt upgrade && sudo apt autoremove && sudo apt autoclean
 ### Now run this command to start the installation
 
 ```
-cd ~ && curl -O https://raw.githubusercontent.com/Discorgento/DevEnvDevilbox/main/devenvdevilbox.sh && chmod +x devenvdevilbox.sh && ./devenvdevilbox.sh
+cd ~ && curl -O https://raw.githubusercontent.com/Discorgento/dev-env-devilbox/main/devenvdevilbox.sh && chmod +x devenvdevilbox.sh && ./devenvdevilbox.sh
 ```
 You can select what you want to install, type the letter to select and press enter
 
@@ -40,7 +40,7 @@ If you select the apps or everything will have another menu like this
 
 ### Optional Alias
 
-https://github.com/Discorgento/DevEnvDevilbox/blob/main/devilbox/.aliases
+https://github.com/Discorgento/dev-env-devilbox/blob/main/devilbox/.aliases
 
 ## Usage ⚙️
 If you want to use the alias you can run the command "xd" to start the containers without xdebug if you want with xdebug you can run the alias "xe"
