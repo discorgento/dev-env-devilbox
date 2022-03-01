@@ -16,7 +16,7 @@ http://devilbox.org/
 
 https://github.com/cytopia/devilbox
 
-## Installation 
+## Installation 🔧
 
 ### Update the system
 
@@ -42,6 +42,28 @@ If you select the apps or everything will have another menu like this
 
 https://github.com/Discorgento/DevEnvDevilbox/blob/main/devilbox/.aliases
 
+## Usage ⚙️
+If you want to use the alias you can run the command "xd" to start the containers without xdebug if you want with xdebug you can run the alias "xe"
+
+Command description alias
+```
+dr='cd ~/devilbox && docker-compose stop && docker-compose rm -f && docker-compose up -d httpd php mysql bind redis elastic && ./shell.sh'
+```
+
+Start without xdebug
+```
+xd='cd ~/devilbox && sed -i '\''/PHP_MODULES_DISABLE/s/xdxe/xdebug/g'\'' .env && dr'
+```
+
+Start with xdebug
+```
+xe='cd ~/devilbox && sed -i '\''/PHP_MODULES_DISABLE/s/xdebug/xdxe/g'\'' .env && dr'
+```
+
+Drop all containers
+```
+ddown='cd ~/devilbox && docker-compose stop && docker-compose rm -f && docker-compose down'
+```
 
 ### Install magento 2
 
@@ -67,4 +89,8 @@ bin/magento setup:install \
 ```
 
 🐓
+
+## Footer notes 🗒
+ - issues and PRs are welcome in this repo;
+ - We want **YOU** for [our community](https://discord.io/Discorgento);
 
