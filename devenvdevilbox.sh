@@ -140,21 +140,21 @@ installenv(){
     git clone https://github.com/cytopia/devilbox.git
 
     cd ~/devilbox/
-    wget -c https://raw.githubusercontent.com/jonatanaxe/DevEnvDevilbox/main/devilbox/.env
-    wget -c https://raw.githubusercontent.com/jonatanaxe/DevEnvDevilbox/main/devilbox/docker-compose.override.yml
+    wget -c https://raw.githubusercontent.com/Discorgento/DevEnvDevilbox/main/devilbox/.env
+    wget -c https://raw.githubusercontent.com/Discorgento/DevEnvDevilbox/main/devilbox/docker-compose.override.yml
     mkdir sh
     cd ~/devilbox/sh
-    wget -c https://raw.githubusercontent.com/jonatanaxe/DevEnvDevilbox/main/devilbox/sh/docker-entrypoint-es.sh
+    wget -c https://raw.githubusercontent.com/Discorgento/DevEnvDevilbox/main/devilbox/sh/docker-entrypoint-es.sh
     cd ~/devilbox/bash/
-    wget -c https://raw.githubusercontent.com/jonatanaxe/DevEnvDevilbox/main/devilbox/bash/aliases.sh
+    wget -c https://raw.githubusercontent.com/Discorgento/DevEnvDevilbox/main/devilbox/bash/aliases.sh
     cd ~/devilbox/autostart/
-    wget -c https://raw.githubusercontent.com/jonatanaxe/DevEnvDevilbox/main/devilbox/autostart/autostart.sh
+    wget -c https://raw.githubusercontent.com/Discorgento/DevEnvDevilbox/main/devilbox/autostart/autostart.sh
     cd ~/devilbox/cfg/php-fpm-7.3/
-    wget -c https://raw.githubusercontent.com/jonatanaxe/DevEnvDevilbox/main/devilbox/cfg/php-fpm-x.x/www_server.conf
+    wget -c https://raw.githubusercontent.com/Discorgento/DevEnvDevilbox/main/devilbox/cfg/php-fpm-x.x/www_server.conf
     cd ~/devilbox/cfg/php-ini-7.3/
-    wget -c https://raw.githubusercontent.com/jonatanaxe/DevEnvDevilbox/main/devilbox/cfg/php-ini-x.x/memory_limit.ini
-    wget -c https://raw.githubusercontent.com/jonatanaxe/DevEnvDevilbox/main/devilbox/cfg/php-ini-x.x/timeouts.ini
-    wget -c https://raw.githubusercontent.com/jonatanaxe/DevEnvDevilbox/main/devilbox/cfg/php-ini-x.x/xdebug.ini
+    wget -c https://raw.githubusercontent.com/Discorgento/DevEnvDevilbox/main/devilbox/cfg/php-ini-x.x/memory_limit.ini
+    wget -c https://raw.githubusercontent.com/Discorgento/DevEnvDevilbox/main/devilbox/cfg/php-ini-x.x/timeouts.ini
+    wget -c https://raw.githubusercontent.com/Discorgento/DevEnvDevilbox/main/devilbox/cfg/php-ini-x.x/xdebug.ini
     cd ~/devilbox/
     
     clear
@@ -170,7 +170,7 @@ aliases(){
         source ~/.aliases
         fi" >> ~/.zshrc
         cd ~
-        wget -c https://raw.githubusercontent.com/jonatanaxe/DevEnvDevilbox/main/devilbox/.aliases
+        wget -c https://raw.githubusercontent.com/Discorgento/DevEnvDevilbox/main/devilbox/.aliases
         echo "***Aliases added"
     else
         echo "***Do not add Aliases"
