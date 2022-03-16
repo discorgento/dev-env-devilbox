@@ -89,33 +89,32 @@ bin/magento setup:install \
 ```
 
 
-Xdebugconfig
+Xdebug 3 json
 
 ```
 {
-    "version": "0.2.0",
-    "configurations": [
-
-      {
-        "name": "Listen for XDebug",
-        "type": "php",
-        "request": "launch",
-        "port": 9000,
-        "pathMappings": {
-          "/shared/httpd/project": "${workspaceFolder}"
-        },
-        "log": true
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Listen for XDebug",
+      "type": "php",
+      "request": "launch",
+      "port": 9000,
+      "pathMappings": {
+        "/shared/httpd/project": "${workspaceFolder}"
       },
-      {
-        "name": "Launch currently open script",
-        "type": "php",
-        "request": "launch",
-        "program": "${file}",
-        "cwd": "${fileDirname}",
-        "port": 9000
-      }
-    ]
-  }
+      "log": true
+    },
+    {
+      "name": "Launch currently open script",
+      "type": "php",
+      "request": "launch",
+      "program": "${file}",
+      "cwd": "${fileDirname}",
+      "port": 9000
+    }
+  ]
+}
   ```
 
 🐓
