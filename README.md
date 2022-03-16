@@ -88,6 +88,36 @@ bin/magento setup:install \
 --elasticsearch-host=172.16.238.240 
 ```
 
+
+Xdebugconfig
+
+```
+{
+    "version": "0.2.0",
+    "configurations": [
+
+      {
+        "name": "Listen for XDebug",
+        "type": "php",
+        "request": "launch",
+        "port": 9000,
+        "pathMappings": {
+          "/shared/httpd/project": "${workspaceFolder}"
+        },
+        "log": true
+      },
+      {
+        "name": "Launch currently open script",
+        "type": "php",
+        "request": "launch",
+        "program": "${file}",
+        "cwd": "${fileDirname}",
+        "port": 9000
+      }
+    ]
+  }
+  ```
+
 🐓
 
 ## Footer notes 🗒
