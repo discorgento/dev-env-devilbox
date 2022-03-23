@@ -89,7 +89,7 @@ bin/magento setup:install \
 ```
 
 
-Xdebug 3 json
+Xdebug 3 VSCODE json
 
 ```
 {
@@ -103,7 +103,12 @@ Xdebug 3 json
       "pathMappings": {
         "/shared/httpd/project": "${workspaceFolder}"
       },
-      "log": true
+      "log": true,
+      "xdebugSettings": {
+        "max_children": 128,
+        "max_data": 512,
+        "max_depth": 3
+      }
     },
     {
       "name": "Launch currently open script",
@@ -115,7 +120,7 @@ Xdebug 3 json
     }
   ]
 }
-  ```
+```
 
 🐓
 
