@@ -1,12 +1,12 @@
 # 🏴‍☠️DevEnvDevilbox Ubuntu 19|20|21
 
 - aliases
-- global mage2tv/magento-cache-clean
-- global n98-magerun2
-- xdebug3
-- composer 1
-- composer 2
-- devilbox v1.11.0
+- global mage2tv/magento-cache-clean [latest version]
+- global n98-magerun2 [latest version]
+- xdebug [3]
+- composer [1]
+- composer [2]
+- devilbox [latest version]
 
 # About Devilbox
 
