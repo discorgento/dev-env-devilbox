@@ -85,7 +85,7 @@ bin/magento setup:install \
 --currency=BRL \
 --timezone=America/Sao_Paulo \
 --use-rewrites=1 \
---elasticsearch-host=172.16.238.240 
+--elasticsearch-host=elasticsearch
 ```
 
 
