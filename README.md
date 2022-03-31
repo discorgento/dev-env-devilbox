@@ -37,6 +37,10 @@ If you select the apps or everything will have another menu like this
 
 ![install apps](https://i.imgur.com/Dlo55J9.png)
 
+### Update Deilbox
+```
+cd ~/devilbox && git pull && docker-compose pull
+```
 
 ### Optional Alias
 
