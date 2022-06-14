@@ -15,6 +15,7 @@ alias mgclog='magento-cloud log'
 alias mgcssh='magento-cloud ssh'
 # update
 alias upgrade='sudo apt update && sudo apt upgrade && sudo apt autoremove && sudo apt autoclean'
+alias upgradedevil='cd ~/devilbox/ && ddown && git pull && docker rmi $(docker images -q) && xd'
 alias ehosts='sudo nano /etc/hosts'
 alias ehostset='sudo sed -i "2i127.0.0.1 ::1  ${PWD##*/}.local" /etc/hosts'
 alias cl='clear'
