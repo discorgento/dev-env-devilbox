@@ -22,10 +22,10 @@ services:
     environment:
       - TZ=${TIMEZONE:-UTC}
       - discovery.type=single-node
-    volumes:
-      - devilbox-elastic:/usr/share/elasticsearch/data;
-      - ./sh/docker-entrypoint-es.sh:/usr/share/elasticsearch/docker-entrypoint-es.sh
-    entrypoint: /usr/share/elasticsearch/docker-entrypoint-es.sh
+#     volumes:
+#       - devilbox-elastic:/usr/share/elasticsearch/data;
+#       - ./sh/docker-entrypoint-es.sh:/usr/share/elasticsearch/docker-entrypoint-es.sh
+#     entrypoint: /usr/share/elasticsearch/docker-entrypoint-es.sh
 
   # logstash:
   #   image: docker.elastic.co/logstash/logstash-oss:${ELK_SERVER:-7.6.2}
