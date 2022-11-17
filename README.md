@@ -1,4 +1,4 @@
-# 🏴‍☠️DevEnvDevilbox Ubuntu 19|20|21
+# 🏴‍☠️DevEnvDevilbox Ubuntu 20|21|22
 
 - aliases
 - global mage2tv/magento-cache-clean [latest version]
