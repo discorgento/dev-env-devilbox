@@ -149,9 +149,9 @@ installenv(){
     wget -c https://raw.githubusercontent.com/Discorgento/dev-env-devilbox/main/devilbox/bash/aliases.sh
     cd ~/devilbox/autostart/
     wget -c https://raw.githubusercontent.com/Discorgento/dev-env-devilbox/main/devilbox/autostart/autostart.sh
-    cd ~/devilbox/cfg/php-fpm-7.3/
+    cd ~/devilbox/cfg/php-fpm-8.1/
     wget -c https://raw.githubusercontent.com/Discorgento/dev-env-devilbox/main/devilbox/cfg/php-fpm-x.x/www_server.conf
-    cd ~/devilbox/cfg/php-ini-7.3/
+    cd ~/devilbox/cfg/php-ini-8.1/
     wget -c https://raw.githubusercontent.com/Discorgento/dev-env-devilbox/main/devilbox/cfg/php-ini-x.x/memory_limit.ini
     wget -c https://raw.githubusercontent.com/Discorgento/dev-env-devilbox/main/devilbox/cfg/php-ini-x.x/timeouts.ini
     wget -c https://raw.githubusercontent.com/Discorgento/dev-env-devilbox/main/devilbox/cfg/php-ini-x.x/xdebug.ini
