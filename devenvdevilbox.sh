@@ -72,9 +72,22 @@ zsh(){
         sudo apt install zsh
         sudo usermod --shell $(which zsh) $USER
         curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh; zsh
-        echo "***which zsh"
+        echo "***Which zsh done!"
     else
-        echo "***Do not add Aliases"
+        echo "***Do not add zsh"
+    fi
+    
+    echo "Add plugin zsh? y/n"
+    read aliases
+    if [ $aliases = "y" ]
+    then
+        git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+        git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+        git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
+        
+        echo "***Plugin zsh done!"
+    else
+        echo "***Do not add plugin zsh"
     fi
 }
 
@@ -106,6 +119,14 @@ Useful links
 Devilbox DOC -> https://devilbox.readthedocs.io/en/latest/
 Gnome Docker -> https://extensions.gnome.org/extension/2224/easy-docker-containers/
 VSCODE Docker -> https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker
+    "
+    
+    echo "
+Enable zsh plugins in file ~/.zshrc
+    
+dnf
+zsh-syntax-highlighting
+zsh-autosuggestions
     "
 }
 
