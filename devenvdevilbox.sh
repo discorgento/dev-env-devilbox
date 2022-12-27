@@ -66,8 +66,8 @@ aliases(){
 zsh(){
     clear
     echo "Add zsh? y/n"
-    read aliases
-    if [ $aliases = "y" ]
+    read zsh
+    if [ $zsh = "y" ]
     then
         sudo apt install zsh
         sudo usermod --shell $(which zsh) $USER
@@ -78,8 +78,8 @@ zsh(){
     fi
     
     echo "Add plugin zsh? y/n"
-    read aliases
-    if [ $aliases = "y" ]
+    read zshplugin
+    if [ $zshplugin = "y" ]
     then
         git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
         git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
