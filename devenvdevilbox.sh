@@ -63,7 +63,7 @@ aliases(){
     fi
 }
 
-zsh(){
+zshsetup(){
     echo "Add zsh? y/n"
     read zsh
     if [ $zsh = "y" ]
@@ -144,7 +144,7 @@ case "$answerini" in
         welcomeenv
     ;;
     z|Z)
-        zsh
+        zshsetup
         welcomeenv
     ;;
     c|C)
