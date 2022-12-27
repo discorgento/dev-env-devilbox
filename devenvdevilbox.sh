@@ -136,10 +136,9 @@ zsh-autosuggestions
 echo -n "
     What you want to install?
         (D)evilBox
-        (C)omplete
         (Z)sh
         (P)luginZsh
-        (A)liases
+        (A)liases(*need zsh)
         (E)xit
 "
 read answerini
@@ -154,11 +153,6 @@ case "$answerini" in
     ;;
     p|P)
         pluginzsh
-        welcomeenv
-    ;;
-    c|C)
-        installenv
-        aliases
         welcomeenv
     ;;
     a|A)
