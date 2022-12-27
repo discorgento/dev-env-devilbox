@@ -31,11 +31,7 @@ cd ~ && curl -O https://raw.githubusercontent.com/Discorgento/dev-env-devilbox/m
 ```
 You can select what you want to install, type the letter to select and press enter
 
-![what do you want to install](https://i.imgur.com/tdlXnrF.png)
-
-If you select the apps or everything will have another menu like this
-
-![install apps](https://i.imgur.com/Dlo55J9.png)
+![what do you want to install](https://cdn.discordapp.com/attachments/783095299525574657/1057374834419576993/image.png)
 
 ### Update Devilbox
 ```
