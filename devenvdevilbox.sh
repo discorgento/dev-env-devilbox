@@ -64,7 +64,6 @@ aliases(){
 }
 
 zsh(){
-    clear
     echo "Add zsh? y/n"
     read zsh
     if [ $zsh = "y" ]
