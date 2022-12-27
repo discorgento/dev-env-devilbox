@@ -11,38 +11,14 @@ sudo apt install \
 
 clear
 
-}
-
 installenv(){
     echo "Install Docker"
-
-    echo "Add docker repository? y/n"
-    read repodocker
-    if [ $repodocker = "y" ]
-    then
-        curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-        sudo add-apt-repository \
-        "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-        $(lsb_release -cs) \
-        stable"
-        echo "***Docker repository added"  
-    else
-        echo "***Do not add repository Docker"
-    fi
-
+    
     sudo apt update
-
-    echo "Install Docker"
-    apt-cache policy docker-ce
-    sudo apt install docker-ce
+    sudo apt install -y docker{,-compose}
 
     echo "Applying user Docker permission"
     sudo usermod -aG docker ${USER}
-
-    echo "Install docker-compose 1.27.4"
-
-    sudo curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-    sudo chmod +x /usr/local/bin/docker-compose
 
     echo "Install Devilbox"
     cd ~
@@ -87,6 +63,21 @@ aliases(){
     fi
 }
 
+zsh(){
+    clear
+    echo "Add zsh? y/n"
+    read aliases
+    if [ $aliases = "y" ]
+    then
+        sudo apt install zsh
+        sudo usermod --shell $(which zsh) $USER
+        curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh; zsh
+        echo "***which zsh"
+    else
+        echo "***Do not add Aliases"
+    fi
+}
+
 welcomeenv(){
     echo "
 ####################
@@ -122,6 +113,7 @@ echo -n "
     What you want to install?
         (D)evilBox
         (C)omplete
+        (Z)sh
         (A)liases
         (E)xit
 "
@@ -129,6 +121,10 @@ read answerini
 case "$answerini" in
     d|D)
         installenv
+        welcomeenv
+    ;;
+    z|Z)
+        zsh
         welcomeenv
     ;;
     c|C)
