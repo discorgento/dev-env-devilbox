@@ -70,8 +70,8 @@ zsh(){
     if [ $zsh = "y" ]
     then
         sudo apt install zsh
-        sudo usermod --shell $(which zsh) $USER
         curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh; zsh
+        sudo usermod --shell $(which zsh) $USER
         echo "***Which zsh done!"
     else
         echo "***Do not add zsh"
