@@ -81,7 +81,7 @@ bin/magento setup:install \
 --admin-email=jonatanaxe@pm.me \
 --admin-user=admin \
 --admin-password=admin123 \
---language=en_US \
+--language=pt_BR \
 --currency=BRL \
 --timezone=America/Sao_Paulo \
 --use-rewrites=1 \
