@@ -1,8 +1,8 @@
 # 🏴‍☠️DevEnvDevilbox Ubuntu 22.04
 
 - aliases
-- global mage2tv/magento-cache-clean [latest version]
-- global n98-magerun2 [latest version]
+- global mage2tv/magento-cache-clean [latest version] aliase: ccw
+- global n98-magerun2 [latest version] aliase: n98
 - xdebug [3]
 - composer [1]
 - composer [2]
