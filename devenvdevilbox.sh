@@ -76,11 +76,14 @@ zshsetup(){
     else
         echo "***Do not add zsh"
     fi
-    
+}
+
+pluginzsh(){
     echo "Add plugin zsh? y/n"
-    read zshplugin
-    if [ $zshplugin = "y" ]
+    read pluginzsh
+    if [ $pluginzsh = "y" ]
     then
+        sudo usermod --shell $(which zsh) $USER
         git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
         git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
         git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
@@ -135,6 +138,7 @@ echo -n "
         (D)evilBox
         (C)omplete
         (Z)sh
+        (P)luginZsh
         (A)liases
         (E)xit
 "
@@ -146,6 +150,10 @@ case "$answerini" in
     ;;
     z|Z)
         zshsetup
+        welcomeenv
+    ;;
+    p|P)
+        pluginzsh
         welcomeenv
     ;;
     c|C)
