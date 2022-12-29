@@ -1,5 +1,7 @@
 # 🏴‍☠️DevEnvDevilbox Ubuntu 22.04
 
+Optimizing development environment for magento 2 with devilbox
+
 - aliases
 - global mage2tv/magento-cache-clean [latest version] aliase: ccw
 - global n98-magerun2 [latest version] aliase: n98
