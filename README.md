@@ -103,7 +103,7 @@ Xdebug 3 VSCODE json
       "request": "launch",
       "port": 9000,
       "pathMappings": {
-        "/shared/httpd/project": "${workspaceFolder}"
+        "/shared/httpd/yeesco-old": "${workspaceFolder}"
       },
       "log": true,
       "xdebugSettings": {
@@ -111,14 +111,6 @@ Xdebug 3 VSCODE json
         "max_data": 512,
         "max_depth": 3
       }
-    },
-    {
-      "name": "Launch currently open script",
-      "type": "php",
-      "request": "launch",
-      "program": "${file}",
-      "cwd": "${fileDirname}",
-      "port": 9000
     }
   ]
 }
