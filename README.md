@@ -103,7 +103,7 @@ Xdebug 3 VSCODE json
       "request": "launch",
       "port": 9000,
       "pathMappings": {
-        "/shared/httpd/yeesco-old": "${workspaceFolder}"
+        "/shared/httpd/project": "${workspaceFolder}"
       },
       "log": true,
       "xdebugSettings": {
