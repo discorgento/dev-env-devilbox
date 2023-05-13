@@ -1,9 +1,9 @@
 # configs aliases
 alias aliasconf='nano ~/.aliases'
 # Devilbox
-alias dup='cd ~/devilbox && docker-compose up -d httpd php mysql bind redis elastic && ./shell.sh'
-alias ddown='cd ~/devilbox && docker-compose stop && docker-compose rm -f && docker-compose down'
-alias dr='cd ~/devilbox && docker-compose stop && docker-compose rm -f && docker-compose up -d httpd php mysql bind redis elastic && ./shell.sh'
+alias dup='cd ~/devilbox && docker compose up -d httpd php mysql bind redis elastic && ./shell.sh'
+alias ddown='cd ~/devilbox && docker compose stop && docker compose rm -f && docker compose down'
+alias dr='cd ~/devilbox && docker compose stop && docker compose rm -f && docker compose up -d httpd php mysql bind redis elastic && ./shell.sh'
 alias denv='cd ~/devilbox && ./shell.sh'
 alias xe="cd ~/devilbox && sed -i '/PHP_MODULES_DISABLE/s/xdebug/xdxe/g' .env && dr"
 alias xd="cd ~/devilbox && sed -i '/PHP_MODULES_DISABLE/s/xdxe/xdebug/g' .env && dr"

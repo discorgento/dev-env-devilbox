@@ -1,5 +1,7 @@
 # 🏴‍☠️DevEnvDevilbox Ubuntu 22.04
 
+> ⚠️ **Your docker should be updated with Compose V2 so that ours aliases work. [Check it out on how to migrate if you need!](https://docs.docker.com/compose/migrate/)**
+
 Optimizing development environment for magento 2 with devilbox
 
 - aliases
