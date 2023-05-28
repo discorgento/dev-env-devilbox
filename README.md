@@ -8,9 +8,12 @@ Optimizing development environment for magento 2 with devilbox
 - global mage2tv/magento-cache-clean [latest version] aliase: ccw
 - global n98-magerun2 [latest version] aliase: n98
 - xdebug [3]
-- composer [1]
-- composer [2]
+- composer [1] aliase: c1
+- composer [2] aliase: c
 - devilbox [latest version]
+- elasticsearch plugins
+  - analysis-icu
+  - analysis-phonetic
 
 # About Devilbox
 
