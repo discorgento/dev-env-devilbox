@@ -14,11 +14,25 @@ clear
 installenv(){
     echo "Install Docker"
     
-    sudo apt update
-    sudo apt install -y docker{,-compose}
+    sudo apt update -y
+
+    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+
+    echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+    sudo apt update -y
+
+    sudo apt install docker-ce
 
     echo "Applying user Docker permission"
     sudo usermod -aG docker ${USER}
+
+    echo "Install Docker Compose v2.20.2"
+    sudo rm -rf $HOME/.docker/cli-plugins/docker-compose
+    curl -SL https://github.com/docker/compose/releases/download/v2.20.2/docker-compose-linux-x86_64 -o $HOME/.docker/cli-plugins/docker-compose
+    sudo chmod +x ~/.docker/cli-plugins/docker-compose
+
+    docker compose version
 
     echo "Install Devilbox"
     cd ~
