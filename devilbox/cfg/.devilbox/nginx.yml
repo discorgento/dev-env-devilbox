@@ -59,11 +59,11 @@ vhost: |
       access_log   "__ACCESS_LOG__" combined;
       error_log    "__ERROR_LOG__" warn;
 
-      set $MAGE_ROOT "/shared/httpd/project";
+      set $MAGE_ROOT "/shared/httpd/PROJECT";
       set $MAGE_MODE developer;
       set $MAGE_DEBUG_SHOW_ARGS 1;
 
-      include "/shared/httpd/project/nginx.conf.sample";
+      include "/shared/httpd/PROJECT/nginx.conf.sample";
 
   __REDIRECT__
   __SSL__
