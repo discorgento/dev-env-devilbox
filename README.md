@@ -125,5 +125,5 @@ Xdebug 3 VSCODE json
 
 ## Footer notes 🗒
  - issues and PRs are welcome in this repo;
- - We want **YOU** for [our community](https://discord.io/Discorgento);
+ - We want **YOU** for [our community](https://discorgento.com/discord);
 
